@@ -3,11 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import heroImage from '@/images/hero-image.png'
+import heroImage from '@/images/hero/hero-image.png'
 
 const Hero = () => {
   return (
-    <section className="bg-cream min-h-[calc(100vh-88px)] flex items-center">
+    <section className="min-h-[calc(100vh-88px)] flex items-center" style={{ backgroundColor: '#FFF7E3' }}>
       <div className="max-w-6xl mx-auto px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -60,11 +60,11 @@ const Hero = () => {
             className="relative w-full h-full flex items-center justify-center"
           >
             <motion.div 
-              className="relative w-[550px] h-[550px] rounded-full overflow-hidden shadow-2xl"
+              className="relative w-[650px] h-[650px] rounded-full overflow-hidden shadow-xl"
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="absolute inset-0 bg-white rounded-full">
+              <div className="absolute inset-0 bg-white rounded-full" >
                 <Image
                   src={heroImage}
                   alt="Delicious katsu curry with pasta"

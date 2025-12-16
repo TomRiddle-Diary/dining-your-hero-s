@@ -1,40 +1,76 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import restaurantImage from '@/images/restaurant.png'
+import { motion, AnimatePresence } from 'framer-motion'
+import restaurantImage1 from '@/images/about/restaurant1.png'
+import restaurantImage2 from '@/images/about/restaurant2.jpg'
+import restaurantImage3 from '@/images/about/restaurant3.png'
 
 const About = () => {
+  // Array of images to flip through (add more images as needed)
+  const images = [
+    restaurantImage1,
+    restaurantImage2, // Replace with different images when you have them
+    restaurantImage3,
+  ]
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const handleImageClick = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
   return (
-    <section className="bg-cream py-20">
+    <section className="py-20" style={{ backgroundColor: '#FFF3D4' }}>
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left - Image with decorative frames */}
+          {/* Left - Image with green rectangle layers */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative max-w-sm mx-auto lg:mx-0"
           >
             <div className="relative">
-              {/* Decorative green frames */}
-              <div className="absolute -top-4 -left-4 w-32 h-32 border-8 border-primary-green rounded-image z-0"></div>
-              <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-primary-green rounded-image z-0"></div>
+              {/* Rectangle layers behind - stacked from front to back */}
+              <div className="absolute top-4 left-4 w-full h-full z-[2] rounded-md" style={{backgroundColor: '#00AA76'}}></div>
+              <div className="absolute top-8 left-8 w-full h-full bg-primary-green z-[1] rounded-md"></div>
               
-              {/* Main image */}
-              <div className="relative z-10 rounded-image overflow-hidden shadow-xl">
-                <div className="relative w-full h-[500px]">
-                  <Image
-                    src={restaurantImage}
-                    alt="Restaurant storefront"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
+              {/* Main vertical rectangular image with flip animation */}
+              <div 
+                className="relative z-10 overflow-hidden shadow-xl rounded-md cursor-pointer group"
+                onClick={handleImageClick}
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentImageIndex}
+                    initial={{ rotateX: -45, rotateY: 45, opacity: 0 }}
+                    animate={{ rotateX: 0, rotateY: 0, opacity: 1 }}
+                    exit={{ rotateX: 45, rotateY: -45, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="relative w-full h-[650px]"
+                    style={{ transformStyle: 'preserve-3d', transformOrigin: 'top left' }}
+                  >
+                    <Image
+                      src={images[currentImageIndex]}
+                      alt={`Restaurant view ${currentImageIndex + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 400px"
+                    />
+                    
+                    {/* Simple click hint - only on first image */}
+                    {currentImageIndex === 0 && (
+                      <div className="absolute bottom-6 right-6 text-white text-sm pointer-events-none transition-opacity duration-300" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                        <p>Click to explore →</p>
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </motion.div>
@@ -70,7 +106,8 @@ const About = () => {
             </motion.h3>
 
             <motion.p
-              className="text-base md:text-lg text-primary-green leading-relaxed"
+              className="text-base md:text-lg leading-relaxed"
+              style={{ color: '#000000' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

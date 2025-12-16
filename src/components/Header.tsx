@@ -16,13 +16,13 @@ const Header = () => {
         {/* Social Icons */}
         <div className="flex items-center gap-4">
           <Link href="https://instagram.com" target="_blank" className="hover:opacity-80 transition-opacity">
-            <i className="fa-brands fa-instagram text-white text-3xl" style={{color: '#EEF5D3'}}></i>
+            <i className="fa-brands fa-instagram text-white text-3xl" style={{color: '#EEF5D3'}} aria-hidden="true"></i>
           </Link>
           <Link href="https://facebook.com" target="_blank" className="hover:opacity-80 transition-opacity">
-            <i className="fa-brands fa-facebook text-white text-3xl" style={{color: '#EEF5D3'}}></i>
+            <i className="fa-brands fa-facebook text-white text-3xl" style={{color: '#EEF5D3'}} aria-hidden="true"></i>
           </Link>
           <Link href="https://twitter.com" target="_blank" className="hover:opacity-80 transition-opacity">
-            <i className="fa-brands fa-x-twitter text-white text-3xl" style={{color: '#EEF5D3'}}></i>
+            <i className="fa-brands fa-x-twitter text-white text-3xl" style={{color: '#EEF5D3'}} aria-hidden="true"></i>
           </Link>
         </div>
 
@@ -41,19 +41,19 @@ const Header = () => {
         <nav className="flex items-center gap-8">
           <Link 
             href="/menu" 
-            className="font-bold text-lg tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
+            className="font-bold text-xl tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
           >
             MENU
           </Link>
           <Link 
             href="/about" 
-            className="font-bold text-lg tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
+            className="font-bold text-xl tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
           >
             ABOUT US
           </Link>
           <Link 
             href="/contact" 
-            className="font-bold text-lg tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
+            className="font-bold text-xl tracking-wide hover:text-primary-orange transition-colors" style={{color: '#EEF5D3'}}
           >
             CONTACT
           </Link>
