@@ -1,0 +1,3 @@
+# Placeholder Image
+# Replace this file with actual food image (food-hero.jpg)
+# Recommended size: 1000x1000px

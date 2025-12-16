@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #0B4943;
+  --primary-orange: #EE781D;
+  --cream: #F5EBD7;
+  --light-cream: #EEF5D3;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--primary-green);
+  font-family: 'Oswald', sans-serif;
+}
