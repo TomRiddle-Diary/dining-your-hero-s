@@ -18,6 +18,9 @@ module.exports = {
         'button': '25px',
         'image': '12px',
       },
+      fontFamily: {
+        japanese: ["'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
+      },
     },
   },
   plugins: [],

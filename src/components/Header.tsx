@@ -10,7 +10,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="bg-primary-green sticky top-0 z-50"
+      className="bg-primary-green relative z-10"
     >
       <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
         {/* Social Icons */}
