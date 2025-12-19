@@ -23,7 +23,7 @@ const About = () => {
   }
 
   return (
-    <section className="py-12 md:py-14" style={{ backgroundColor: '#FFF3D4' }}>
+    <section className="py-6 md:py-12" style={{ backgroundColor: '#FFF3D4' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
@@ -33,12 +33,12 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-sm mx-auto lg:mx-0 pb-8 pr-8 sm:pb-10 sm:pr-10 lg:pb-0 lg:pr-0"
+            className="relative w-full max-w-[400px] sm:max-w-[400px] md:max-w-sm mx-auto lg:mx-0"
           >
-            <div className="relative">
+            <div className="relative ">
               {/* Rectangle layers behind - stacked from front to back */}
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto w-[calc(100%-12px)] sm:w-[calc(100%-16px)] lg:w-full h-[calc(100%-12px)] sm:h-[calc(100%-16px)] lg:h-full z-[2] rounded-md" style={{backgroundColor: '#00AA76'}}></div>
-              <div className="hidden sm:block absolute bottom-6 right-6 sm:bottom-8 sm:right-8 lg:top-8 lg:left-8 lg:bottom-auto lg:right-auto w-[calc(100%-24px)] sm:w-[calc(100%-32px)] lg:w-full h-[calc(100%-24px)] sm:h-[calc(100%-32px)] lg:h-full bg-primary-green z-[1] rounded-md"></div>
+              <div className="hidden lg:block absolute top-4 left-4 w-full h-full z-[2] rounded-md" style={{backgroundColor: '#00AA76'}}></div>
+              <div className="hidden lg:block absolute top-8 left-8 w-full h-full bg-primary-green z-[1] rounded-md"></div>
               
               {/* Main vertical rectangular image with flip animation */}
               <div 
@@ -84,7 +84,7 @@ const About = () => {
             className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 text-center lg:text-left"
           >
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-orange uppercase leading-tight"
+              className="text-4xl lg:text-5xl font-bold text-primary-orange uppercase leading-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ const About = () => {
             </motion.h2>
 
             <motion.h3
-              className="text-2xl md:text-3xl font-bold text-primary-green"
+              className="text-xl md:text-3xl font-bold text-primary-green"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,7 +106,7 @@ const About = () => {
             </motion.h3>
 
             <motion.p
-              className="text-base md:text-lg leading-relaxed"
+              className="text-xs md:text-lg text-left leading-relaxed"
               style={{ color: '#000000' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -124,8 +124,8 @@ const About = () => {
             >
               <Link 
                 href="/about"
-                className="inline-block bg-primary-green font-bold text-2xl px-12 py-4 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 uppercase tracking-wide"
-                style={{color: '#FFFFFF', boxShadow: '1px 4px 0 0 #00AA76'}}
+                className="inline-block bg-primary-green text-white font-bold text-[clamp(1rem,3vw,1.5rem)] px-8 sm:px-10 lg:px-12 py-2.5 sm:py-3 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 uppercase tracking-wide"
+                style={{boxShadow: '1px 4px 0 0 #00AA76'}}
               >
                 LEARN MORE
               </Link>

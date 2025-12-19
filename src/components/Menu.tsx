@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SectionHeader, NavArrow, cardVariants, ANIMATION_LOCK_DURATION, SPRING_CONFIG } from '@/components/shared/carouselUtils'
+import { SectionHeader, NavArrow, PaginationDots, cardVariants, ANIMATION_LOCK_DURATION, SPRING_CONFIG } from '@/components/shared/carouselUtils'
 import katsuCurryImg from '@/images/menu/katsu_curry.png'
 import turkeyRiceImg from '@/images/menu/turkey_rice.png'
 import beefDonImg from '@/images/menu/beef_don.png'
@@ -37,6 +37,20 @@ const Menu = () => {
     position === 'left' ? handlePrev() : handleNext()
   }, [isAnimating, handlePrev, handleNext])
 
+  const handleDragEnd = useCallback((_: any, info: { offset: { x: number }, velocity: { x: number } }) => {
+    if (isAnimating) return
+    const swipeThreshold = 50
+    const swipeVelocityThreshold = 500
+    
+    if (Math.abs(info.offset.x) > swipeThreshold || Math.abs(info.velocity.x) > swipeVelocityThreshold) {
+      if (info.offset.x > 0) {
+        handlePrev()
+      } else {
+        handleNext()
+      }
+    }
+  }, [isAnimating, handlePrev, handleNext])
+
   const visibleItems = useMemo(() => {
     const leftIndex = centerIndex === 0 ? menuItems.length - 1 : centerIndex - 1
     const rightIndex = centerIndex === menuItems.length - 1 ? 0 : centerIndex + 1
@@ -48,22 +62,26 @@ const Menu = () => {
   }, [centerIndex])
 
   return (
-    <section className="py-12 md:py-14 lg:py-16 relative bg-[#FFF7E3] overflow-hidden">
+    <section className="py-6 md:py-12 relative bg-[#FFF7E3] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <SectionHeader color="text-primary-green">THE HERO,S</SectionHeader>
+        <SectionHeader color="text-primary-green" marginBottom=''>THE HERO,S</SectionHeader>
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="relative flex items-center justify-center mb-20 sm:mb-24 md:mb-12">
+          <div className="relative flex items-center justify-center mb-0 lg:mb-0">
             <div className="hidden lg:block absolute left-0 z-20">
               <NavArrow direction="left" onClick={handlePrev} disabled={isAnimating} />
             </div>
 
             <motion.div 
-              className="w-full max-w-[90vw] mx-auto lg:max-w-none overflow-visible"
+              className="w-full max-w-[90vw] mx-auto lg:max-w-none overflow-visible cursor-grab active:cursor-grabbing"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={handleDragEnd}
             >
               <div className="flex items-center justify-center gap-2 md:gap-4">
                 <AnimatePresence mode="popLayout" initial={false}>
@@ -124,12 +142,22 @@ const Menu = () => {
             <div className="hidden lg:block absolute right-0 z-20">
               <NavArrow direction="right" onClick={handleNext} disabled={isAnimating} />
             </div>
+          </div>
 
-            <div className="flex lg:hidden gap-3 sm:gap-4 absolute -bottom-16 sm:-bottom-20 left-1/2 -translate-x-1/2 items-center">
-              <NavArrow direction="left" onClick={handlePrev} disabled={isAnimating} />
-              <div className="w-12 sm:w-16 h-1 bg-primary-green rounded-full" />
-              <NavArrow direction="right" onClick={handleNext} disabled={isAnimating} />
-            </div>
+          {/* Mobile Pagination Dots - Below carousel */}
+          <div className="lg:hidden mt-6 sm:mt-8">
+            <PaginationDots 
+              total={menuItems.length}
+              activeIndex={centerIndex}
+              onDotClick={(index) => {
+                if (!isAnimating) {
+                  setIsAnimating(true)
+                  setCenterIndex(index)
+                  setTimeout(() => setIsAnimating(false), ANIMATION_LOCK_DURATION)
+                }
+              }}
+              disabled={isAnimating}
+            />
           </div>
         </div>
 
@@ -138,13 +166,14 @@ const Menu = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="flex justify-center mt-4 md:mt-8 px-4"
+          className="flex justify-center mt-6 md:mt-8 px-4"
         >
           <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-primary-green text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-2.5 md:py-3 rounded-full shadow-lg uppercase tracking-wide"
+            className="inline-block bg-primary-green text-white font-bold text-[clamp(1rem,3vw,1.5rem)] px-8 sm:px-10 lg:px-12 py-2.5 sm:py-3 rounded-full shadow-lg uppercase tracking-wide hover:bg-opacity-90 transition-all"
+            style={{ boxShadow: '1px 4px 0 0 #00AA76' }}
           >
             READ MENU
           </motion.a>

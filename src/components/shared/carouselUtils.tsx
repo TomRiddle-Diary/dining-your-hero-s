@@ -35,13 +35,21 @@ export const cardVariants = {
 }
 
 // Shared Section Header Component
-export const SectionHeader = ({ children, color = 'text-primary-orange' }: { children: React.ReactNode; color?: string }) => (
+export const SectionHeader = ({ 
+  children, 
+  color = 'text-primary-orange',
+  marginBottom = 'mb-6 md:mb-10 lg:mb-12'
+}: { 
+  children: React.ReactNode; 
+  color?: string;
+  marginBottom?: string;
+}) => (
   <motion.h2
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.2, duration: 0.6 }}
-    className={`text-center text-3xl md:text-4xl lg:text-5xl font-bold ${color} uppercase mb-8 md:mb-12 lg:mb-16 px-4`}
+    className={`text-center text-4xl lg:text-5xl font-bold ${color} uppercase ${marginBottom} px-4`}
   >
     {children}
   </motion.h2>
@@ -95,8 +103,8 @@ export const PaginationDots = ({ total, activeIndex, onDotClick, disabled }: Pag
         disabled={disabled}
         className={`transition-all duration-300 rounded-full ${
           index === activeIndex
-            ? 'w-6 h-2 md:w-8 md:h-3 bg-primary-green'
-            : 'w-2 h-2 md:w-3 md:h-3 bg-gray-400 hover:bg-gray-500'
+            ? 'w-1.5 h-1.5 md:w-3 md:h-3 bg-primary-green'
+            : 'w-1.5 h-1.5 md:w-3 md:h-3 bg-gray-400 hover:bg-gray-500'
         }`}
         aria-label={`Go to item ${index + 1}`}
       />
