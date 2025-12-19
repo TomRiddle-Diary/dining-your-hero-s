@@ -23,22 +23,22 @@ const About = () => {
   }
 
   return (
-    <section className="py-14" style={{ backgroundColor: '#FFF3D4' }}>
-      <div className="max-w-6xl mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-12 md:py-14" style={{ backgroundColor: '#FFF3D4' }}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
           {/* Left - Image with green rectangle layers */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30, x: 0 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8 }}
-            className="relative max-w-sm mx-auto lg:mx-0"
+            className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-sm mx-auto lg:mx-0 pb-8 pr-8 sm:pb-10 sm:pr-10 lg:pb-0 lg:pr-0"
           >
             <div className="relative">
               {/* Rectangle layers behind - stacked from front to back */}
-              <div className="absolute top-4 left-4 w-full h-full z-[2] rounded-md" style={{backgroundColor: '#00AA76'}}></div>
-              <div className="absolute top-8 left-8 w-full h-full bg-primary-green z-[1] rounded-md"></div>
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto w-[calc(100%-12px)] sm:w-[calc(100%-16px)] lg:w-full h-[calc(100%-12px)] sm:h-[calc(100%-16px)] lg:h-full z-[2] rounded-md" style={{backgroundColor: '#00AA76'}}></div>
+              <div className="hidden sm:block absolute bottom-6 right-6 sm:bottom-8 sm:right-8 lg:top-8 lg:left-8 lg:bottom-auto lg:right-auto w-[calc(100%-24px)] sm:w-[calc(100%-32px)] lg:w-full h-[calc(100%-24px)] sm:h-[calc(100%-32px)] lg:h-full bg-primary-green z-[1] rounded-md"></div>
               
               {/* Main vertical rectangular image with flip animation */}
               <div 
@@ -52,7 +52,7 @@ const About = () => {
                     animate={{ rotateX: 0, rotateY: 0, opacity: 1 }}
                     exit={{ rotateX: 45, rotateY: -45, opacity: 0 }}
                     transition={{ duration: 0.6, ease: "easeInOut" }}
-                    className="relative w-full h-[650px]"
+                    className="relative w-full h-[420px] sm:h-[500px] md:h-[580px] lg:h-[650px]"
                     style={{ transformStyle: 'preserve-3d', transformOrigin: 'top left' }}
                   >
                     <Image
@@ -60,7 +60,7 @@ const About = () => {
                       alt={`Restaurant view ${currentImageIndex + 1}`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 400px"
+                      sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 100vw, 400px"
                     />
                     
                     {/* Simple click hint - only on first image */}
@@ -77,14 +77,14 @@ const About = () => {
 
           {/* Right - Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30, x: 0 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 text-center lg:text-left"
           >
             <motion.h2 
-              className="text-5xl md:text-6xl font-bold text-primary-orange uppercase leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-orange uppercase leading-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
