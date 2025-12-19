@@ -109,7 +109,7 @@ const Menu = () => {
   }, [centerIndex])
 
   return (
-    <section className="py-10 relative" style={{ backgroundColor: '#FFF7E3' }}>
+    <section className="py-14 relative" style={{ backgroundColor: '#FFF7E3' }}>
       <div className="max-w-7xl mx-auto px-2 lg:px-4">
         
         {/* Header */}
@@ -132,7 +132,7 @@ const Menu = () => {
               onClick={handlePrev}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden lg:flex w-12 h-12 rounded-full border-2 border-primary-green bg-white items-center justify-center hover:bg-primary-green hover:text-white transition-all shadow-lg z-20 absolute left-2 lg:left-4"
+              className="hidden lg:flex w-14 h-14 rounded-full border-2 border-primary-green bg-white items-center justify-center hover:bg-primary-green hover:text-white transition-all shadow-lg z-20 absolute left-2 lg:left-4"
             >
               <ChevronLeft size={24} strokeWidth={3} />
             </motion.button>
@@ -223,7 +223,7 @@ const Menu = () => {
               onClick={handleNext}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden lg:flex w-12 h-12 rounded-full border-2 border-primary-green bg-white items-center justify-center hover:bg-primary-green hover:text-white transition-all shadow-lg z-20 absolute right-0"
+              className="hidden lg:flex w-14 h-14 rounded-full border-2 border-primary-green bg-white items-center justify-center hover:bg-primary-green hover:text-white transition-all shadow-lg z-20 absolute right-0"
             >
               <ChevronRight size={24} strokeWidth={3} />
             </motion.button>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import restaurantImage1 from '@/images/about/restaurant1.png'
-import restaurantImage2 from '@/images/about/restaurant2.jpg'
+import restaurantImage2 from '@/images/about/master.webp'
 import restaurantImage3 from '@/images/about/restaurant3.png'
 
 const About = () => {
@@ -23,7 +23,7 @@ const About = () => {
   }
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#FFF3D4' }}>
+    <section className="py-14" style={{ backgroundColor: '#FFF3D4' }}>
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import { Instagram as InstagramIcon, Facebook, Twitter } from 'lucide-react'
 
 const Instagram = () => {
   // REPLACE THESE with actual Instagram post URLs from @hirotakaira
@@ -41,7 +42,7 @@ const Instagram = () => {
   }, [])
 
   return (
-    <section className="py-20 relative" style={{ backgroundColor: '#FFF3D4' }}>
+    <section className="py-14 relative" style={{ backgroundColor: '#FFF3D4' }}>
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         
         {/* Header */}
@@ -69,17 +70,11 @@ const Instagram = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 * index, duration: 0.8 }}
-              whileHover={{ scale: 1.05, 
-                            transition: { 
-                              type: "spring",
-                              stiffness: 400,
-                              damping: 10
-                            } }}
+              transition={{ delay: 0.5, duration: 0.6 }}
               className="flex justify-center h-[600px] rounded-xl shadow-lg"
             >
               <blockquote
-                className="instagram-media"
+                className="instagram-media hover:scale-100 transition-transform"
                 data-instgrm-permalink={postUrl}
                 data-instgrm-version="14"
                 style={{
@@ -126,23 +121,41 @@ const Instagram = () => {
           <Link 
             href="https://www.instagram.com/hirotakaira/" 
             target="_blank"
-            className="hover:scale-110 transition-transform"
+            className="block"
           >
-            <i className="fa-brands fa-instagram text-primary-green text-5xl" aria-hidden="true"></i>
+            <motion.div 
+              whileHover={{ scale: 1.15, rotate: 5 }} 
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-primary-green hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:border-transparent transition-all duration-300 shadow-md hover:shadow-xl"
+            >
+              <InstagramIcon size={36} className="text-primary-green group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+            </motion.div>
           </Link>
           <Link 
             href="https://facebook.com" 
             target="_blank"
-            className="hover:scale-110 transition-transform"
+            className="block"
           >
-            <i className="fa-brands fa-facebook text-primary-green text-5xl" aria-hidden="true"></i>
+            <motion.div 
+              whileHover={{ scale: 1.15, rotate: -5 }} 
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-primary-green hover:bg-blue-600 hover:border-transparent transition-all duration-300 shadow-md hover:shadow-xl"
+            >
+              <Facebook size={36} className="text-primary-green group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+            </motion.div>
           </Link>
           <Link 
             href="https://twitter.com" 
             target="_blank"
-            className="hover:scale-110 transition-transform"
+            className="block"
           >
-            <i className="fa-brands fa-x-twitter text-primary-green text-5xl" aria-hidden="true"></i>
+            <motion.div 
+              whileHover={{ scale: 1.15, rotate: 5 }} 
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-primary-green hover:bg-sky-500 hover:border-transparent transition-all duration-300 shadow-md hover:shadow-xl"
+            >
+              <Twitter size={36} className="text-primary-green group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+            </motion.div>
           </Link>
         </motion.div>
       </div>
