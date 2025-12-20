@@ -1,3 +1,4 @@
+import LoadingScreen from '@/components/LoadingScreen'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
@@ -9,15 +10,18 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Menu />
-      <Instagram />
-      <TestimonialCarousel />
-      <Access />
-      <Footer />
-    </main>
+    <>
+      <LoadingScreen />
+      <main className="min-h-screen">
+        <Header />
+        <Hero />
+        <About />
+        <Menu />
+        <Instagram />
+        <TestimonialCarousel />
+        <Access />
+        <Footer />
+      </main>
+    </>
   )
 }
