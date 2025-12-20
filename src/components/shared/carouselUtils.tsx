@@ -38,7 +38,7 @@ export const cardVariants = {
 export const SectionHeader = ({ 
   children, 
   color = 'text-primary-orange',
-  marginBottom = 'mb-6 md:mb-10 lg:mb-12'
+  marginBottom = 'mb-8 md:mb-10 lg:mb-12'
 }: { 
   children: React.ReactNode; 
   color?: string;
@@ -103,8 +103,8 @@ export const PaginationDots = ({ total, activeIndex, onDotClick, disabled }: Pag
         disabled={disabled}
         className={`transition-all duration-300 rounded-full ${
           index === activeIndex
-            ? 'w-1.5 h-1.5 md:w-3 md:h-3 bg-primary-green'
-            : 'w-1.5 h-1.5 md:w-3 md:h-3 bg-gray-400 hover:bg-gray-500'
+            ? 'w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-green'
+            : 'w-1.5 h-1.5 md:w-2 md:h-2 bg-gray-400 hover:bg-gray-500'
         }`}
         aria-label={`Go to item ${index + 1}`}
       />

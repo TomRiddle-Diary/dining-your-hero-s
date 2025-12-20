@@ -8,75 +8,65 @@ import logo from '@/images/logo.svg'
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-green py-8 md:py-10 lg:py-12 relative">
+    <footer className="bg-primary-green py-4 md:py-6 lg:py-8 relative">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         
-        <div className="flex flex-col items-center gap-6 md:gap-8 mb-6 md:mb-8">
+        {/* Main Content - Mobile: Vertical Stack, Desktop: Three Columns */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center gap-8 mb-8 lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start"
+        >
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="flex justify-center items-center"
-          >
+          {/* Left Column - Logo */}
+          <div className="flex justify-center lg:justify-start">
             <Link href="/" className="hover:opacity-90 transition-opacity">
               <Image 
                 src={logo} 
                 alt="Dining Your Hero,s" 
-                width={140} 
-                height={78}
-                className="sm:w-[160px] sm:h-[90px] md:w-[170px] md:h-[95px]"
+                width={160} 
+                height={90}
+                className="w-[140px] h-auto sm:w-[160px] md:w-[180px]"
               />
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.nav
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="flex flex-wrap justify-center items-center gap-4 md:gap-6 lg:gap-8"
-          >
+          {/* Center Column - Navigation Links */}
+          <nav className="flex flex-col items-center gap-3 md:gap-4">
             <Link 
               href="#"
-              className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+              className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               MENU
             </Link>
             <Link 
               href="#"
-              className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+              className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               ABOUT US
             </Link>
             <Link 
               href="#"
-              className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+              className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               CONTACT
             </Link>
             <Link 
-              href="/privacy_policy.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+              href="#"
+              className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               PRIVACY
             </Link>
-          </motion.nav>
+          </nav>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="flex justify-center items-center gap-4 md:gap-6"
-          >
+          {/* Right Column - Social Icons */}
+          <div className="flex justify-center items-center gap-4 md:gap-6 lg:justify-end">
             <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
               <Link 
                 href="#"
@@ -101,14 +91,15 @@ const Footer = () => {
                 <Twitter className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" style={{ color: '#EEF5D3' }} strokeWidth={2} />
               </Link>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
+        {/* Copyright - Full Width Bottom */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
           className="text-center pt-6 md:pt-8 border-t border-[#EEF5D3]/30"
         >
           <p 

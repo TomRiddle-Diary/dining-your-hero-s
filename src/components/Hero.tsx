@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section className="flex flex-grow items-center bg-[#FFF7E3] py-8 sm:py-12 lg:py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -65,7 +65,7 @@ const Hero = () => {
             className="relative w-full flex items-center justify-center order-1 lg:order-2"
           >
             <motion.div 
-              className="relative w-[70vw] max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[550px] aspect-square rounded-full overflow-hidden shadow-2xl"
+              className="relative w-[70vw] max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px] aspect-square rounded-full overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={TRANSITIONS.hover}
             >
