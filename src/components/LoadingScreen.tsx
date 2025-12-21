@@ -59,7 +59,8 @@ const LoadingScreen = () => {
           initial={{ y: 0 }}
           exit={{ y: '-100%' }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-primary-green"
+          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          style={{ backgroundColor: '#FFF7E3' }}
         >
           <div
             role="status"
