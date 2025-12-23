@@ -125,9 +125,9 @@ const TestimonialCarousel = () => {
                               </svg>
                             ))}
                           </div>
-                          <p className={`flex-1 mb-4 sm:mb-5 md:mb-6 font-japanese leading-relaxed text-center flex items-center justify-center lg:text-left ${
+                          <p className={`flex-1 mb-4 sm:mb-5 md:mb-6 font-japanese leading-relaxed text-left flex items-center ${
                             isCenter 
-                              ? 'text-xs sm:text-sm md:text-base lg:text-lg text-gray-800' 
+                              ? 'text-sm sm:text-base md:text-lg lg:text-lg text-gray-800' 
                               : 'text-[10px] sm:text-xs md:text-sm text-gray-700'
                           }`}>
                             {item.text}
