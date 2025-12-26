@@ -94,7 +94,7 @@ const About = () => {
             >
               ABOUT
               <br />
-              YOUR HERO'S
+              YOUR HERO&apos;S
             </motion.h2>
 
             <motion.h3

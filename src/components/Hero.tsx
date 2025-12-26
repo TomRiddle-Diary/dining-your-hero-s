@@ -39,7 +39,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, ...TRANSITIONS.fadeInUp }}
               >
-                HERO'S
+                HERO&apos;S
               </motion.span>
             </h1>
 

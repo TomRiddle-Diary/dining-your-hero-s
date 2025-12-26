@@ -64,7 +64,7 @@ const Menu = () => {
   return (
     <section className="py-6 md:py-12 relative bg-[#FFF7E3] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <SectionHeader color="text-primary-green" marginBottom=''>THE HERO'S</SectionHeader>
+        <SectionHeader color="text-primary-green" marginBottom=''>THE HERO&apos;S</SectionHeader>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
