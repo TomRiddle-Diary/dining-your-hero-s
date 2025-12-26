@@ -77,7 +77,8 @@ const Footer = () => {
             </motion.div>
             <motion.div whileHover={{ scale: 1.15, rotate: -5 }} whileTap={{ scale: 0.95 }}>
               <Link 
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100011514402994"
+                target="_blank"
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-600 transition-all duration-300 shadow-lg"
               >
                 <Facebook className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" style={{ color: '#EEF5D3' }} strokeWidth={2} />
@@ -106,7 +107,7 @@ const Footer = () => {
             className="text-xs sm:text-sm md:text-base"
             style={{ color: '#EEF5D3' }}
           >
-            ©2025 Dining Your HERO,S ALL Rights Reserved.
+            ©2025 Dining Your HERO'S ALL Rights Reserved.
           </p>
         </motion.div>
       </div>

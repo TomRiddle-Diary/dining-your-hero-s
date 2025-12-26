@@ -26,7 +26,7 @@ const LoadingScreen = () => {
     }
   }, [])
 
-  const letters = 'HERO,S'.split('')
+  const letters = "HERO'S".split('')
 
   const containerVariants = {
     hidden: { opacity: 0 },

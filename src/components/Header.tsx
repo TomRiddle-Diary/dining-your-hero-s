@@ -32,7 +32,7 @@ const Header = () => {
             </motion.div>
             <motion.div whileHover={{ scale: 1.15, rotate: -5 }} whileTap={{ scale: 0.95 }}>
               <Link 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=100011514402994" 
                 target="_blank" 
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >

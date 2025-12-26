@@ -38,7 +38,6 @@ export const cardVariants = {
 export const SectionHeader = ({ 
   children, 
   color = 'text-primary-orange',
-  marginBottom = 'mb-8 md:mb-10 lg:mb-12'
 }: { 
   children: React.ReactNode; 
   color?: string;
@@ -49,7 +48,7 @@ export const SectionHeader = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.2, duration: 0.6 }}
-    className={`text-center text-4xl lg:text-5xl font-bold ${color} uppercase ${marginBottom} px-4`}
+    className={`text-center text-4xl lg:text-5xl font-bold ${color} uppercase px-4`}
   >
     {children}
   </motion.h2>

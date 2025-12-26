@@ -19,7 +19,8 @@ module.exports = {
         'image': '12px',
       },
       fontFamily: {
-        japanese: ["'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
+        japanese: ["'Zen Kaku Gothic New'", "'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
+        'japanese-body': ["'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
       },
     },
   },

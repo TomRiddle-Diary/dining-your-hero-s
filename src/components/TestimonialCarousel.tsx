@@ -82,6 +82,15 @@ const TestimonialCarousel = () => {
     <section className="py-6 md:py-12 relative bg-[#FFF7E3] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeader color="text-primary-green">VOICE FROM CUSTOMERS</SectionHeader>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-center text-xl md:text-3xl font-black text-primary-orange font-japanese mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12"
+        >
+          お客様の声
+        </motion.p>
         <div className="relative max-w-6xl mx-auto">
           <div className="relative flex items-center justify-center mb-0 lg:mb-0">
             <div className="hidden lg:block absolute left-0 z-30">
@@ -125,7 +134,7 @@ const TestimonialCarousel = () => {
                               </svg>
                             ))}
                           </div>
-                          <p className={`flex-1 mb-4 sm:mb-5 md:mb-6 font-japanese leading-relaxed text-left flex items-center ${
+                          <p className={`flex-1 mb-4 sm:mb-5 md:mb-6 font-japanese-body leading-relaxed text-left flex items-center ${
                             isCenter 
                               ? 'text-sm sm:text-base md:text-lg lg:text-lg text-gray-800' 
                               : 'text-[10px] sm:text-xs md:text-sm text-gray-700'
@@ -140,7 +149,7 @@ const TestimonialCarousel = () => {
                                 <div className="w-full h-full bg-gradient-to-br from-primary-green to-primary-orange" />
                               )}
                             </div>
-                            <p className={`font-bold font-japanese ${
+                            <p className={`font-bold font-japanese-body ${
                               isCenter ? 'text-xs sm:text-sm md:text-base lg:text-lg' : 'text-[10px] sm:text-xs md:text-sm'
                             }`}>{item.author}</p>
                           </div>

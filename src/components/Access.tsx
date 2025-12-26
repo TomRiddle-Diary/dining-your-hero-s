@@ -9,6 +9,15 @@ const Access = () => {
     <section className="py-12 md:py-14 relative bg-[#FFF3D4]">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeader color="text-primary-orange">WHERE WE ARE</SectionHeader>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-center text-xl md:text-3xl font-black text-primary-green mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
+        >
+          アクセス・営業時間
+        </motion.p>
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           
           <motion.div
@@ -27,7 +36,7 @@ const Access = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Dining your HERO,s Location"
+                title="Dining your HERO'S Location"
               />
             </div>
           </motion.div>
@@ -44,13 +53,13 @@ const Access = () => {
               <div className="flex items-start gap-3 md:gap-4">
                 <MapPin size={24} className="text-primary-green mt-0.5 flex-shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7" strokeWidth={2} />
                 <div className="flex-1 min-w-0">
-                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2 font-japanese">
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2 font-japanese-body">
                     〒858-0914
                   </p>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-800 font-japanese leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-900 font-bold font-japanese-body leading-relaxed">
                     長崎県佐世保市川下町173-1
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1 md:mt-2 font-japanese">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1 md:mt-2 font-japanese-body">
                     ※駐車場はございません、近隣のコインパーキングを利用ください
                   </p>
                 </div>
@@ -59,10 +68,10 @@ const Access = () => {
               <div className="flex items-start gap-3 md:gap-4">
                 <Calendar size={24} className="text-primary-green mt-0.5 flex-shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7" strokeWidth={2} />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm sm:text-base md:text-lg font-bold text-gray-900 font-japanese">
+                  <p className="text-sm sm:text-base md:text-lg font-bold text-gray-900 font-japanese-body">
                     定休日：水曜日
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1 md:mt-2 font-japanese">
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1 md:mt-2 font-japanese-body">
                     ※営業時間・定休日は変更となる場合がございますので、ご来店前に店舗にご確認ください。
                   </p>
                 </div>
@@ -71,24 +80,24 @@ const Access = () => {
               <div className="flex items-start gap-3 md:gap-4">
                 <Clock size={24} className="text-primary-green mt-0.5 flex-shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7" strokeWidth={2} />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm sm:text-base md:text-lg text-gray-900 font-japanese leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-900 font-bold font-japanese-body leading-relaxed">
                     11:30 - 15:30 (L.O. 15:00)
                   </p>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-900 font-japanese leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-900 font-bold font-japanese-body leading-relaxed">
                     17:30 - 22:00 (L.O. 21:30)
                   </p>
                 </div>
               </div>
 
               <div className="pt-4 md:pt-6 border-t border-gray-200">
-                <p className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-3 md:mb-4 font-japanese">
+                <p className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-3 md:mb-4 font-japanese-body">
                   ご予約・お問い合わせ
                 </p>
                 <div className="flex items-center gap-3 md:gap-4">
                   <Phone size={24} className="text-primary-green flex-shrink-0 sm:w-6 sm:h-6 md:w-7 md:h-7" strokeWidth={2} />
                   <a
                     href="tel:090-9582-0863"
-                    className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-primary-orange hover:opacity-80 transition-colors"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary-orange hover:opacity-80 transition-colors"
                   >
                     090-9582-0863
                   </a>

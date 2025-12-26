@@ -26,20 +26,20 @@ const Hero = () => {
           >
             <h1 className="text-primary-green">
               <motion.span 
-                className="block font-black leading-tight text-[clamp(2.5rem,10vw,5rem)]"
+                className="block font-black leading-tight text-[clamp(2.5rem,10vw,5.5rem)]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, ...TRANSITIONS.fadeInUp }}
               >
-                EAT
+                WELCOME TO
               </motion.span>
               <motion.span 
-                className="block font-black leading-tight text-[clamp(2.5rem,10vw,5rem)]"
+                className="block font-black leading-tight text-[clamp(2.5rem,10vw,5.5rem)]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, ...TRANSITIONS.fadeInUp }}
               >
-                LIKE HERO,S
+                HERO'S
               </motion.span>
             </h1>
 

@@ -51,10 +51,19 @@ const Instagram = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-center text-4xl md:text-5xl font-bold text-primary-orange uppercase mb-12"
+          className="text-center text-4xl md:text-5xl font-bold text-primary-orange uppercase"
         >
-          KEEP IN TOUCH WITH HERO,S
+          KEEP IN TOUCH WITH HERO'S
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-center text-xl md:text-3xl font-black text-primary-green mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
+        >
+          最新情報をチェック
+        </motion.p>
 
         {/* Instagram Carousel */}
         <div className="relative max-w-6xl mx-auto mb-8">
@@ -176,7 +185,7 @@ const Instagram = () => {
             </motion.div>
           </Link>
           <Link 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/profile.php?id=100011514402994" 
             target="_blank"
             className="block"
           >

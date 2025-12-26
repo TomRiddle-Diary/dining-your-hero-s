@@ -65,8 +65,10 @@ const About = () => {
                     
                     {/* Simple click hint - only on first image */}
                     {currentImageIndex === 0 && (
-                      <div className="absolute bottom-6 right-6 text-white text-sm pointer-events-none transition-opacity duration-300" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-                        <p>Click to explore →</p>
+                      <div className="absolute bottom-6 right-6 pointer-events-none transition-opacity duration-300">
+                        <div className="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full flex items-center justify-center">
+                          <p className="font-bold text-white text-base md:text-xl whitespace-nowrap">店内を見る</p>
+                        </div>
                       </div>
                     )}
                   </motion.div>
@@ -92,17 +94,17 @@ const About = () => {
             >
               ABOUT
               <br />
-              YOUR HERO,S
+              YOUR HERO'S
             </motion.h2>
 
             <motion.h3
-              className="text-xl md:text-3xl font-bold text-primary-green"
+              className="text-xl md:text-3xl font-black text-primary-green font-japanese"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              佐世保唯一の洋食居酒屋
+              こだわりの料理と雰囲気
             </motion.h3>
 
             <motion.p
