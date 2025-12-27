@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import heroImage from '@/images/hero/hero-image3.webp'
+import heroImage from '@/images/hero/hero-image3.png'
 
 const TRANSITIONS = {
   fadeInLeft: { duration: 0.8, ease: 'easeOut' },
