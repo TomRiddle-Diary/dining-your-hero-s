@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import heroImage from '@/images/hero/hero-image.png'
+import heroImage from '@/images/hero/hero-image3.webp'
 
 const TRANSITIONS = {
   fadeInLeft: { duration: 0.8, ease: 'easeOut' },
@@ -14,15 +14,15 @@ const TRANSITIONS = {
 
 const Hero = () => {
   return (
-    <section className="flex flex-grow items-center bg-[#FFF7E3] py-8 sm:py-12 lg:py-16 overflow-hidden">
+    <section className="flex items-center bg-[#FFF7E3] py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 sm:gap-10 lg:gap-8 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={TRANSITIONS.fadeInLeft}
-            className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1 w-full"
+            className="space-y-2 sm:space-y-4 lg:space-y-8 text-center lg:text-left order-2 lg:order-1 w-full"
           >
             <h1 className="text-primary-green">
               <motion.span 
@@ -59,26 +59,24 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.8, rotate: -12 }}
+            animate={{ opacity: 1, scale: 1.2, rotate: -12 }}
             transition={TRANSITIONS.fadeInScale}
             className="relative w-full flex items-center justify-center order-1 lg:order-2"
           >
             <motion.div 
-              className="relative w-[70vw] max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[600px] aspect-square rounded-full overflow-hidden shadow-2xl"
-              whileHover={{ scale: 1.05, rotate: 2 }}
+              className="relative w-full aspect-video"
+              whileHover={{ scale: 1.02 }}
               transition={TRANSITIONS.hover}
             >
-              <div className="absolute inset-0 bg-white rounded-full">
-                <Image
-                  src={heroImage}
-                  alt="Delicious katsu curry with pasta"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 640px) 70vw, (max-width: 768px) 350px, (max-width: 1024px) 400px, 550px"
-                />
-              </div>
+              <Image
+                src={heroImage}
+                alt="Delicious katsu curry with pasta"
+                fill
+                className="object-cover rounded-2xl"
+                priority
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
+              />
             </motion.div>
           </motion.div>
 
