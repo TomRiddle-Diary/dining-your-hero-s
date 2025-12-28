@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { SectionHeader, NavArrow, PaginationDots, cardVariants, ANIMATION_LOCK_DURATION, SPRING_CONFIG } from '@/components/shared/carouselUtils'
 import katsuCurryImg from '@/images/menu/oomori_katus_carry.webp'
 import turkeyRiceImg from '@/images/menu/turkey_rice.webp'
-import beefDonImg from '@/images/hero/hero-image3.png'
+import beefDonImg from '@/images/menu/beef_don.webp'
 import dryCurryImg from '@/images/menu/dry_curry.webp'
 
 const menuItems = [
