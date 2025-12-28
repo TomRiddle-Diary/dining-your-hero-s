@@ -4,14 +4,16 @@ import { useState, useMemo, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SectionHeader, NavArrow, PaginationDots, cardVariants, ANIMATION_LOCK_DURATION, SPRING_CONFIG } from '@/components/shared/carouselUtils'
-import katsuCurryImg from '@/images/menu/katsu_curry.png'
-import turkeyRiceImg from '@/images/menu/turkey_rice.png'
-import beefDonImg from '@/images/menu/beef_don.png'
+import katsuCurryImg from '@/images/menu/oomori_katus_carry.webp'
+import turkeyRiceImg from '@/images/menu/turkey_rice.webp'
+import beefDonImg from '@/images/hero/hero-image3.png'
+import dryCurryImg from '@/images/menu/dry_curry.webp'
 
 const menuItems = [
-  { id: 1, title: '山盛りチキンカツカレー', subtitle: 'ボリュームたっぷり！！\nお腹いっぱい!', image: katsuCurryImg },
-  { id: 2, title: 'トルコライス', subtitle: '長崎名物\n大人のお子様ランチ', image: turkeyRiceImg, featured: true },
-  { id: 3, title: 'ステーキ丼', subtitle: '柔らか赤身ステーキ\nガリバタソースでどうぞ!', image: beefDonImg },
+  { id: 1, title: '山盛りステーキ丼', subtitle: '柔らか赤身ステーキ\nガリバタソースでどうぞ!', image: beefDonImg},
+  { id: 2, title: '山盛りチキンカツカレー', subtitle: 'ボリュームたっぷり!!\nお腹いっぱい!', image: katsuCurryImg },
+  { id: 3, title: 'トルコライス', subtitle: '長崎名物\n大人のお子様ランチ', image: turkeyRiceImg },
+  { id:4, title: 'チーズフォンデュドライカレー', subtitle: 'チーズマグマ\n海で泳ぎたい!', image: dryCurryImg}
 ] as const
 
 const Menu = () => {

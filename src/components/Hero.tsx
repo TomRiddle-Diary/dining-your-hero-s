@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import heroImage from '@/images/hero/hero-image3.png'
+import heroImage from '@/images/menu/oomori_katus_carry.webp'
 
 const TRANSITIONS = {
   fadeInLeft: { duration: 0.8, ease: 'easeOut' },
@@ -59,8 +59,8 @@ const Hero = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -12 }}
-            animate={{ opacity: 1, scale: 1.2, rotate: -12 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1.3 }}
             transition={TRANSITIONS.fadeInScale}
             className="relative w-full flex items-center justify-center order-1 lg:order-2"
           >
@@ -73,7 +73,7 @@ const Hero = () => {
                 src={heroImage}
                 alt="Delicious katsu curry with pasta"
                 fill
-                className="object-cover rounded-2xl"
+                className="object-contain rounded-2xl"
                 priority
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
               />
