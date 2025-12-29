@@ -123,7 +123,11 @@ const Menu = () => {
                             <Image
                               src={item.image}
                               alt={`ヒーローズ(Dining Your Hero's)${item.title} 佐世保・川下町の人気メニュー`}
-                              className="rounded-lg object-cover w-full h-48"
+                              fill
+                              className="object-contain pointer-events-none"
+                              sizes="(max-width: 640px) 75vw, (max-width: 768px) 400px, 600px"
+                              priority={item.id === 2}
+                              draggable={false}
                             />
                           </motion.div>
                           <div className="p-2 sm:p-3 md:p-4 text-center">

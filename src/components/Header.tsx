@@ -55,7 +55,10 @@ const Header = () => {
             <Image
               src={logo}
               alt="ヒーローズ(Dining Your Hero's) ロゴ 佐世保・川下町の洋食居酒屋"
-              className="h-10 w-auto"
+              width={140} 
+              height={78}
+              className="md:w-[170px] md:h-[95px]"
+              priority
             />
           </Link>
 

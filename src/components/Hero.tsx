@@ -70,7 +70,7 @@ const Hero = () => {
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1.3 }}
+            animate={{ opacity: 1, scale: 1.1 }}
             transition={TRANSITIONS.fadeInScale}
             className="relative w-full flex items-center justify-center order-1 lg:order-2"
           >
@@ -82,7 +82,7 @@ const Hero = () => {
               <Image
                 src={heroImage}
                 alt="佐世保・川下町の洋食居酒屋 ヒーローズ (Dining Your Hero's) 外観"
-                className="rounded-xl object-cover w-full h-full"
+                className="object-contain rounded-2xl"
                 priority
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
               />
