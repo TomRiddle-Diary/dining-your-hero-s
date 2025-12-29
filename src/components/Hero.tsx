@@ -81,9 +81,8 @@ const Hero = () => {
             >
               <Image
                 src={heroImage}
-                alt="佐世保 Dining Your Hero's 山盛りチキンカツカレー 川下町・相浦 洋食居酒屋"
-                fill
-                className="object-contain rounded-2xl"
+                alt="佐世保・川下町の洋食居酒屋 ヒーローズ (Dining Your Hero's) 外観"
+                className="rounded-xl object-cover w-full h-full"
                 priority
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
               />

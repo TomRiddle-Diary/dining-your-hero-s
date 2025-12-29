@@ -25,7 +25,7 @@ const Footer = () => {
             <Link href="/" className="hover:opacity-90 transition-opacity">
               <Image 
                 src={logo} 
-                alt="Dining Your Hero's ロゴ 佐世保 洋食居酒屋" 
+                alt="ヒーローズ(Dining Your Hero'sSロゴ 佐世保・川下町の洋食居酒屋" 
                 width={160} 
                 height={90}
                 className="w-[140px] h-auto sm:w-[160px] md:w-[180px]"

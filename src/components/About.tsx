@@ -61,7 +61,7 @@ const About = () => {
                   >
                     <Image
                       src={images[currentImageIndex]}
-                      alt={`Dining Your Hero's 店内写真 佐世保 川下町 洋食居酒屋`}
+                      alt="ヒーローズ(Dining Your Hero's) 店内・スタッフ 佐世保・川下町の洋食居酒屋"
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 100vw, 400px"
