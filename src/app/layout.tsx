@@ -19,6 +19,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/8036d0d404.js" crossOrigin="anonymous" async></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LPBY4XY8T"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8LPBY4XY8T');
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
