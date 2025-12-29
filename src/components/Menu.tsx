@@ -122,7 +122,7 @@ const Menu = () => {
                           >
                             <Image
                               src={item.image}
-                              alt={item.title}
+                              alt={`Dining Your Hero's ${item.title} ${item.price} 佐世保 川下町 洋食メニュー`}
                               fill
                               className="object-contain pointer-events-none"
                               sizes="(max-width: 640px) 75vw, (max-width: 768px) 400px, 600px"

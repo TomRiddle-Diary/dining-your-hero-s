@@ -3,8 +3,9 @@ import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "Dining Your Hero's - Japanese Restaurant",
-  description: "Experience authentic Japanese cuisine at Dining Your Hero's",
+  title: "佐世保・相浦・川下町の洋食居酒屋 Dining Your Hero's | 人気メニュー・ランチ・ディナー",
+  description: "Dining Your Hero'sは佐世保市川下町・相浦エリアで人気の洋食居酒屋。山盛りチキンカツカレーやトルコライスなど、ボリューム満点のメニューが揃うアットホームなレストランです。ランチ・ディナー・学割・団体予約もOK！",
+  // keywords: ["佐世保", "相浦", "川下町", "洋食", "居酒屋", "チキンカツカレー", "トルコライス", "ランチ", "ディナー", "学割", "団体予約"]
 }
 
 export default function RootLayout({

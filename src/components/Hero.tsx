@@ -81,7 +81,7 @@ const Hero = () => {
             >
               <Image
                 src={heroImage}
-                alt="Delicious katsu curry with pasta"
+                alt="佐世保 Dining Your Hero's 山盛りチキンカツカレー 川下町・相浦 洋食居酒屋"
                 fill
                 className="object-contain rounded-2xl"
                 priority
