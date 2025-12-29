@@ -4,16 +4,20 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import restaurantImage1 from '@/images/about/restaurant1.png'
-import restaurantImage2 from '@/images/about/master.webp'
-import restaurantImage3 from '@/images/about/restaurant3.png'
+import restaurantImage1 from '@/images/about/restaurant1.webp'
+import restaurantImage3 from '@/images/about/restaurant3.webp'
+import restaurantImage4 from '@/images/about/restaurant4.webp'
+import restaurantImage5 from '@/images/about/restaurant5.webp'
+import restaurantImage6 from '@/images/about/restaurant6.webp'
 
 const About = () => {
   // Array of images to flip through (add more images as needed)
   const images = [
     restaurantImage1,
-    restaurantImage2, // Replace with different images when you have them
     restaurantImage3,
+    restaurantImage6,
+    restaurantImage4,
+    restaurantImage5,
   ]
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -67,7 +71,7 @@ const About = () => {
                     {currentImageIndex === 0 && (
                       <div className="absolute bottom-6 right-6 pointer-events-none transition-opacity duration-300">
                         <div className="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full flex items-center justify-center">
-                          <p className="font-bold text-white text-base md:text-xl whitespace-nowrap">店内を見る</p>
+                          <p className="font-bold text-white text-base md:text-xl whitespace-nowrap">タップしてを店内を見る</p>
                         </div>
                       </div>
                     )}
@@ -115,7 +119,9 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              あっ侵害考慮最終、方針による検証権目的できと、のみしをの創作以外権公衆可能ライセンスの方針物実践かたとえばです反しせるうにことがパブリックなる「作品に格別必要いるください満たさといてです名前 GFDL 化フリー権、記載引用ともが対ないる。の（規約さる、でに明記自由五要素物しいユーザできるを礼避けるる侵害いるさ編集 CC する書ようでの担保ファイルウィキメディアはとに10ない重要引用してでウィキペディ
+              佐世保市にある『Dining your HERO's』は、ランチからディナーまで、手頃な価格でボリューム満点の料理を楽しめるカジュアルダイニングです。
+お子様ランチのご用意や学割制度もあり、ご家族連れや学生さんなど、幅広い世代の方に日常使いしていただける空間作りを大切にしています。また、お酒のメニューも充実しており、女子会や忘新年会といった団体様のご予約も承っております。
+お一人様でもグループでも、いつでも気軽にお立ち寄りください
             </motion.p>
 
             <motion.div

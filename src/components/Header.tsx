@@ -23,7 +23,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
               <Link 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/hirotakaira/" 
                 target="_blank" 
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >

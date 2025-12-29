@@ -2,7 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCallback } from 'react'
 import { motion } from 'framer-motion'
+import { Phone } from 'lucide-react'
 import heroImage from '@/images/menu/oomori_katus_carry.webp'
 
 const TRANSITIONS = {
@@ -48,13 +50,21 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, ...TRANSITIONS.fadeInUp }}
             >
-              <Link 
-                href="#"
-                className="inline-block bg-primary-green text-white font-bold text-[clamp(1rem,3vw,1.5rem)] px-8 sm:px-10 lg:px-12 py-2.5 sm:py-3 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 uppercase tracking-wide shadow-lg"
-                style={{ boxShadow: '1px 4px 0 0 #00AA76' }}
-              >
-                ORDER NOW
-              </Link>
+              <div className="flex justify-center lg:justify-start w-full mt-4">
+                <button
+                  type="button"
+                  onClick={useCallback(() => {
+                    const el = document.getElementById('access');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, [])}
+                  className="bg-primary-green text-white font-black text-[clamp(1rem,3vw,1.5rem)] px-8 sm:px-10 lg:px-12 py-2.5 sm:py-3 rounded-full hover:bg-opacity-90 transition-all hover:scale-105 uppercase tracking-wide shadow-lg font-japanese flex items-center gap-2"
+                  style={{ boxShadow: '1px 4px 0 0 #00AA76' }}
+                >
+                  <Phone size={23} className="inline-block" /> 予約する
+                </button>
+              </div>
             </motion.div>
           </motion.div>
 

@@ -36,28 +36,29 @@ const Footer = () => {
           {/* Center Column - Navigation Links */}
           <nav className="flex flex-col items-center gap-3 md:gap-4">
             <Link 
-              href="#"
+              href="/menu"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               MENU
             </Link>
             <Link 
-              href="#"
+              href="/about"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               ABOUT US
             </Link>
             <Link 
-              href="#"
+              href="/about"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
               CONTACT
             </Link>
             <Link 
-              href="#"
+              href="/privacy_policy.pdf"
+              target="_blank"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
@@ -69,7 +70,7 @@ const Footer = () => {
           <div className="flex justify-center items-center gap-4 md:gap-6 lg:justify-end">
             <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
               <Link 
-                href="#"
+                href="https://www.instagram.com/hirotakaira/"
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 transition-all duration-300 shadow-lg"
               >
                 <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9" style={{ color: '#EEF5D3' }} strokeWidth={2} />

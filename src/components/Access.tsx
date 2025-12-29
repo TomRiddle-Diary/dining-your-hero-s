@@ -6,7 +6,7 @@ import { SectionHeader } from '@/components/shared/carouselUtils'
 
 const Access = () => {
   return (
-    <section className="py-12 md:py-14 relative bg-[#FFF3D4]">
+    <section id='access' className="py-12 md:py-14 relative bg-[#FFF3D4]">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeader color="text-primary-orange">WHERE WE ARE</SectionHeader>
         <motion.p

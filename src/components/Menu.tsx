@@ -10,10 +10,10 @@ import beefDonImg from '@/images/menu/beef_don.webp'
 import dryCurryImg from '@/images/menu/dry_curry.webp'
 
 const menuItems = [
-  { id: 1, title: '山盛りステーキ丼', subtitle: '柔らか赤身ステーキ\nガリバタソースでどうぞ!', image: beefDonImg},
-  { id: 2, title: '山盛りチキンカツカレー', subtitle: 'ボリュームたっぷり!!\nお腹いっぱい!', image: katsuCurryImg },
-  { id: 3, title: 'トルコライス', subtitle: '長崎名物\n大人のお子様ランチ', image: turkeyRiceImg },
-  { id:4, title: 'チーズフォンデュドライカレー', subtitle: 'チーズマグマ\n海で泳ぎたい!', image: dryCurryImg}
+  { id: 1, title: 'ステーキ丼', price: '山盛り→1,300円\n通常→950円', image: beefDonImg},
+  { id: 2, title: '山盛りチキンカツカレー', price: '一般→950円\n 学生→900円', image: katsuCurryImg },
+  { id: 3, title: 'トルコライス', price: '通常→950円\nスペシャル→1,200円', image: turkeyRiceImg },
+  { id:4, title: 'チーズフォンデュドライカレー', price: '950円', image: dryCurryImg}
 ] as const
 
 const Menu = () => {
@@ -136,10 +136,10 @@ const Menu = () => {
                             }`}>
                               {item.title}
                             </h3>
-                            <p className={`font-bold whitespace-pre-line leading-relaxed text-pink-500 font-japanese ${
-                              isCenter ? 'text-xs sm:text-sm md:text-base lg:text-lg' : 'text-[10px] sm:text-xs md:text-sm'
+                            <p className={`font-bold whitespace-pre-line leading-relaxed text-red-600 font-japanese ${
+                              isCenter ? 'text-sm sm:text-base md:text-lg lg:text-xl' : 'text-xs sm:text-sm md:text-base'
                             }`}>
-                              {item.subtitle}
+                              {item.price}
                             </p>
                           </div>
                         </div>
@@ -180,7 +180,7 @@ const Menu = () => {
           className="flex justify-center mt-6 md:mt-8 px-4"
         >
           <motion.a
-            href="#"
+            href="/menu"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-primary-green text-white font-bold text-[clamp(1rem,3vw,1.5rem)] px-8 sm:px-10 lg:px-12 py-2.5 sm:py-3 rounded-full shadow-lg uppercase tracking-wide hover:bg-opacity-90 transition-all"
