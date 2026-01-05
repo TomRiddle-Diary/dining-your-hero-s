@@ -112,7 +112,7 @@ const About = () => {
             </motion.h3>
 
             <motion.p
-              className="text-xs md:text-lg text-left leading-relaxed"
+              className="text-xs md:text-lg text-left font-medium lg:font-normal leading-relaxed"
               style={{ color: '#000000' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

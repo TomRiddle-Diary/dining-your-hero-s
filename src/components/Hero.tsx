@@ -70,7 +70,7 @@ const Hero = () => {
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1.0 }}
             transition={TRANSITIONS.fadeInScale}
             className="relative w-full flex items-center justify-center order-1 lg:order-2"
           >
