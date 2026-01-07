@@ -6,15 +6,15 @@ import { SectionHeader } from '@/components/shared/carouselUtils'
 
 const Access = () => {
   return (
-    <section id='access' className="py-12 md:py-14 relative bg-[#FFF3D4]">
+    <section id='access' className="py-12 md:py-14 relative bg-[#FFF7E3]">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <SectionHeader color="text-primary-orange">WHERE WE ARE</SectionHeader>
+        <SectionHeader color="text-primary-green">WHERE WE ARE</SectionHeader>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center text-xl md:text-3xl font-black text-primary-green mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
+          className="text-center text-xl md:text-3xl font-black text-primary-orange mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
         >
           アクセス・営業時間
         </motion.p>

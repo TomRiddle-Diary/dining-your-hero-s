@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Instagram, Facebook, Twitter, Menu, X } from 'lucide-react'
+import { Instagram, Facebook, Menu, X } from 'lucide-react'
 import logo from '@/images/logo.svg'
 
 const Header = () => {
@@ -37,15 +37,6 @@ const Header = () => {
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Facebook size={28} style={{ color: '#EEF5D3' }} strokeWidth={2} />
-              </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-              <Link 
-                href="https://twitter.com" 
-                target="_blank" 
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-sky-500 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <Twitter size={28} style={{ color: '#EEF5D3' }} strokeWidth={2} />
               </Link>
             </motion.div>
           </div>
@@ -188,16 +179,6 @@ const Header = () => {
                       className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-blue-600 transition-all duration-300"
                     >
                       <Facebook size={24} style={{ color: '#EEF5D3' }} strokeWidth={2} />
-                    </Link>
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-                    <Link 
-                      href="https://twitter.com" 
-                      target="_blank"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-sky-500 transition-all duration-300"
-                    >
-                      <Twitter size={24} style={{ color: '#EEF5D3' }} strokeWidth={2} />
                     </Link>
                   </motion.div>
                 </div>

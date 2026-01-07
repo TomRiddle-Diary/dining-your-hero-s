@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Menu from '@/components/Menu'
+import Bounenkai from '@/components/Bounenkai'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
 import Instagram from '@/components/Instagram'
 import Access from '@/components/Access'
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <About />
         <Menu />
+        <Bounenkai />
         <Instagram />
         <TestimonialCarousel />
         <Access />

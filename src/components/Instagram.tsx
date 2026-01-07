@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useEffect } from 'react'
-import { Instagram as InstagramIcon, Facebook, Twitter } from 'lucide-react'
+import { Instagram as InstagramIcon, Facebook } from 'lucide-react'
 
 const Instagram = () => {
   // REPLACE THESE with actual Instagram post URLs from @hirotakaira
@@ -42,7 +42,7 @@ const Instagram = () => {
   }, [])
 
   return (
-    <section className="py-6 md:py-12  relative" style={{ backgroundColor: '#FFF3D4' }}>
+    <section className="py-6 md:py-12  relative" style={{ backgroundColor: '#FFF7E3' }}>
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         
         {/* Header */}
@@ -51,7 +51,7 @@ const Instagram = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-center text-4xl md:text-5xl font-bold text-primary-orange uppercase"
+          className="text-center text-4xl md:text-5xl font-bold text-primary-green uppercase"
         >
           KEEP IN TOUCH WITH HERO&apos;S
         </motion.h2>
@@ -60,7 +60,7 @@ const Instagram = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center text-xl md:text-3xl font-black text-primary-green mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
+          className="text-center text-xl md:text-3xl font-black text-primary-orange mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12 font-japanese"
         >
           最新情報をチェック
         </motion.p>
@@ -195,19 +195,6 @@ const Instagram = () => {
               className="group flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-primary-green hover:bg-blue-600 hover:border-transparent transition-all duration-300 shadow-md hover:shadow-xl"
             >
               <Facebook size={36} className="text-primary-green group-hover:text-white transition-colors duration-300" strokeWidth={2} />
-            </motion.div>
-          </Link>
-          <Link 
-            href="https://twitter.com" 
-            target="_blank"
-            className="block"
-          >
-            <motion.div 
-              whileHover={{ scale: 1.15, rotate: 5 }} 
-              whileTap={{ scale: 0.95 }}
-              className="group flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-primary-green hover:bg-sky-500 hover:border-transparent transition-all duration-300 shadow-md hover:shadow-xl"
-            >
-              <Twitter size={36} className="text-primary-green group-hover:text-white transition-colors duration-300" strokeWidth={2} />
             </motion.div>
           </Link>
         </motion.div>

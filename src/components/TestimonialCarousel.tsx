@@ -79,15 +79,15 @@ const TestimonialCarousel = () => {
   }, [isAnimating, handlePrev, handleNext])
 
   return (
-    <section className="py-6 md:py-12 relative bg-[#FFF7E3] overflow-hidden">
+    <section className="py-6 md:py-12 relative bg-[#FFF3D4] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <SectionHeader color="text-primary-green">VOICE FROM CUSTOMERS</SectionHeader>
+        <SectionHeader color="text-primary-orange">VOICE FROM CUSTOMERS</SectionHeader>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center text-xl md:text-3xl font-black text-primary-orange font-japanese mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12"
+          className="text-center text-xl md:text-3xl font-black text-primary-green font-japanese mt-2 sm:mt-4 md:mt-6 mb-8 md:mb-10 lg:mb-12"
         >
           お客様の声
         </motion.p>
