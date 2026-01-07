@@ -87,7 +87,7 @@ const Bounenkai = () => {
                 </div>
 
                 <div className="pt-4 mt-6 border-t border-gray-200">
-                  <p className="text-sm md:text-base text-left">
+                  <p className="text-sm md:text-base font-japanese-body text-left">
                     『今年の忘年会、どうしよう？』とお悩みの幹事様。 2〜3名様の小さな集まりから、お店を貸し切った大きなパーティまで、 人数に合わせた最適なプランをご提案します。まずは気軽にお電話ください！
                   </p>
                 </div>
