@@ -11,8 +11,8 @@ import dryCurryImg from '@/images/menu/dry_curry.webp'
 
 const menuItems = [
   { id: 1, title: 'ステーキ丼', price: '山盛り→1,300円\n通常→950円', image: beefDonImg},
-  { id: 2, title: '山盛りチキンカツカレー', price: '一般→950円\n 学生→900円', image: katsuCurryImg },
-  { id: 3, title: 'トルコライス', price: '通常→950円\nスペシャル→1,200円', image: turkeyRiceImg },
+  { id: 2, title: '山盛りチキンカツカレー', price: '一般→1000円\n 学生→900円', image: katsuCurryImg },
+  { id: 3, title: 'トルコライス', price: '通常→950円\nスペシャル→1,300円', image: turkeyRiceImg },
   { id:4, title: 'チーズフォンデュドライカレー', price: '950円', image: dryCurryImg}
 ] as const
 
