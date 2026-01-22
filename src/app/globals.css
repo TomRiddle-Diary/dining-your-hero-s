@@ -15,3 +15,13 @@ body {
   color: var(--primary-green);
   font-family: 'Oswald', sans-serif;
 }
+
+/* Custom scrollbar styles - Hidden */
+.scrollbar-thin {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
