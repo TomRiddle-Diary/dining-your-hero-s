@@ -4,25 +4,35 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const LoadingScreen = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [showShine, setShowShine] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
-
-    // Trigger shine after letters appear (0.12 * 6 letters = 0.72s + 0.3s delay)
-    const shineTimer = setTimeout(() => setShowShine(true), 1000)
+    // Check if loading animation has already been shown in this session
+    const hasShownLoading = sessionStorage.getItem('hasShownLoading')
     
-    // Exit after shine completes
-    const exitTimer = setTimeout(() => {
-      setIsLoading(false)
-      document.body.style.overflow = 'unset'
-    }, 2000)
+    // Only show loading on initial page load (not when navigating back)
+    if (!hasShownLoading) {
+      setIsLoading(true)
+      document.body.style.overflow = 'hidden'
+      
+      // Mark that loading has been shown
+      sessionStorage.setItem('hasShownLoading', 'true')
 
-    return () => {
-      clearTimeout(shineTimer)
-      clearTimeout(exitTimer)
-      document.body.style.overflow = 'unset'
+      // Trigger shine after letters appear (0.12 * 6 letters = 0.72s + 0.3s delay)
+      const shineTimer = setTimeout(() => setShowShine(true), 1000)
+      
+      // Exit after shine completes
+      const exitTimer = setTimeout(() => {
+        setIsLoading(false)
+        document.body.style.overflow = 'unset'
+      }, 2000)
+
+      return () => {
+        clearTimeout(shineTimer)
+        clearTimeout(exitTimer)
+        document.body.style.overflow = 'unset'
+      }
     }
   }, [])
 

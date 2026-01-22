@@ -16,12 +16,51 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-/* Custom scrollbar styles - Hidden */
-.scrollbar-thin {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.scrollbar-thin::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC transparent;
+}
+
+/* Category navigation scrollbar */
+.category-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC transparent;
+  padding-bottom: 16px;
+}
+
+.category-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 3px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb:hover {
+  background: #999999;
 }

@@ -7,7 +7,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Instagram, Facebook, Menu, X } from 'lucide-react'
 import logo from '@/images/logo.svg'
 
-const Header = () => {
+interface HeaderProps {
+  isFixed?: boolean;
+}
+
+const Header = ({ isFixed = true }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -16,14 +20,14 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="bg-primary-green relative z-50"
+        className={`bg-primary-green ${isFixed ? 'relative' : 'relative'} top-0 left-0 right-0 z-50 shadow-md`}
       >
         <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
-          {/* Social Icons - Desktop Only */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Social Icons - Hidden on mobile */}
+          <div className="hidden md:flex items-center gap-4">
             <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
               <Link 
-                href="https://www.instagram.com/hirotakaira/" 
+                href="https://www.instagram.com/hero.s_sasebo/" 
                 target="_blank" 
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
@@ -53,34 +57,12 @@ const Header = () => {
             />
           </Link>
 
-          {/* Navigation - Desktop Only */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link 
-              href="/menu" 
-              className="font-bold text-xl tracking-wide hover:opacity-80 transition-opacity" style={{color: '#EEF5D3'}}
-            >
-              MENU
-            </Link>
-            <Link 
-              href="/about" 
-              className="font-bold text-xl tracking-wide hover:opacity-80 transition-opacity" style={{color: '#EEF5D3'}}
-            >
-              ABOUT US
-            </Link>
-            <Link 
-              href="/contact" 
-              className="font-bold text-xl tracking-wide hover:opacity-80 transition-opacity" style={{color: '#EEF5D3'}}
-            >
-              CONTACT
-            </Link>
-          </nav>
-
-          {/* Hamburger Menu Button - Mobile Only */}
+          {/* Hamburger Menu Button - All screens */}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -92,7 +74,7 @@ const Header = () => {
         </div>
       </motion.header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -100,13 +82,13 @@ const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 z-40"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu */}
+      {/* Side Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -114,7 +96,7 @@ const Header = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-primary-green z-50 shadow-2xl lg:hidden"
+            className="fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-primary-green z-50 shadow-2xl"
           >
             <div className="flex flex-col h-full p-6">
               {/* Close Button */}
@@ -163,7 +145,7 @@ const Header = () => {
                 <div className="flex items-center gap-4">
                   <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
                     <Link 
-                      href="https://instagram.com" 
+                      href="https://www.instagram.com/hero.s_sasebo/" 
                       target="_blank"
                       onClick={() => setIsMenuOpen(false)}
                       className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 transition-all duration-300"

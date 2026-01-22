@@ -2,20 +2,34 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Instagram as InstagramIcon, Facebook } from 'lucide-react'
 
 const Instagram = () => {
-  // REPLACE THESE with actual Instagram post URLs from @hirotakaira
-  // Example: https://www.instagram.com/p/ABC123xyz/
-  const instagramPosts = [
+  const [instagramPosts, setInstagramPosts] = useState<string[]>([
     'https://www.instagram.com/p/DOPxlA1D9MB/?img_index=1',
     'https://www.instagram.com/p/DIr2WKFhuq1/?img_index=1',
     'https://www.instagram.com/p/DCPxstBSB8_/?img_index=1',
     'https://www.instagram.com/p/C-L6JW4Kcvj/',
-  ]
+  ])
 
   useEffect(() => {
+    // Fetch latest Instagram posts from API
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch('/api/instagram')
+        const data = await response.json()
+        if (data.posts && data.posts.length > 0) {
+          setInstagramPosts(data.posts)
+        }
+      } catch (error) {
+        console.error('Failed to fetch Instagram posts:', error)
+        // Keep fallback posts if fetch fails
+      }
+    }
+
+    fetchPosts()
+
     // Load Instagram embed script
     const script = document.createElement('script')
     script.src = 'https://www.instagram.com/embed.js'
@@ -172,7 +186,7 @@ const Instagram = () => {
           className="flex items-center justify-center gap-8"
         >
           <Link 
-            href="https://www.instagram.com/hirotakaira/" 
+            href="https://www.instagram.com/hero.s_sasebo/" 
             target="_blank"
             className="block"
           >
