@@ -7,6 +7,7 @@ import Bounenkai from '@/components/Bounenkai'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
 import Instagram from '@/components/Instagram'
 import Access from '@/components/Access'
+import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <Instagram />
         <TestimonialCarousel />
         <Access />
+        <ContactForm />
         <Footer />
       </main>
     </>

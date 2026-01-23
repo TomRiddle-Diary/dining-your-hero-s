@@ -100,7 +100,7 @@ const Footer = () => {
             className="text-xs sm:text-sm md:text-base"
             style={{ color: '#EEF5D3' }}
           >
-            ©2025 Dining Your HERO&apos;S ALL Rights Reserved.
+            ©2026 Dining Your HERO&apos;S ALL Rights Reserved.
           </p>
         </motion.div>
       </div>

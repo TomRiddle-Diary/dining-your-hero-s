@@ -72,7 +72,7 @@ const specialtyMenu: MenuItem[] = [
     id: 'cheese-fondue-dry-curry',
     name: 'チーズフォンデュドライカレー',
     description: 'チーズ好きにはたまらない！\nチーズマグマの海で泳ぎたい!!',
-    price: '1,300円',
+    price: '900円',
     note: '※スープ・サラダ付。',
     image: dryCurry,
   },
@@ -132,7 +132,7 @@ const donburiTeishokuMenu: MenuItem[] = [
   {
     id: 'turkey-rice',
     name: 'トルコライス',
-    price: '900円',
+    price: '950円',
   },
   {
     id: 'turkey-special',
