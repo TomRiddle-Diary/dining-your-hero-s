@@ -7,10 +7,10 @@ import { Instagram as InstagramIcon, Facebook } from 'lucide-react'
 
 const Instagram = () => {
   const [instagramPosts, setInstagramPosts] = useState<string[]>([
-    'https://www.instagram.com/p/DOPxlA1D9MB/?img_index=1',
-    'https://www.instagram.com/p/DIr2WKFhuq1/?img_index=1',
-    'https://www.instagram.com/p/DCPxstBSB8_/?img_index=1',
-    'https://www.instagram.com/p/C-L6JW4Kcvj/',
+    'https://www.instagram.com/p/DS1FFeqkxUH/',
+    'https://www.instagram.com/p/DThXCEuEYn7/',
+    'https://www.instagram.com/p/DTtqnLpE3iP/',
+    'https://www.instagram.com/p/DTeyRIoiZlK/',
   ])
 
   useEffect(() => {
@@ -19,8 +19,12 @@ const Instagram = () => {
       try {
         const response = await fetch('/api/instagram')
         const data = await response.json()
-        if (data.posts && data.posts.length > 0) {
+        
+        if (data.posts && data.posts.length === 4) {
+          console.log('Successfully fetched Instagram posts:', data.posts.length)
           setInstagramPosts(data.posts)
+        } else {
+          console.warn('Instagram API returned unexpected data:', data)
         }
       } catch (error) {
         console.error('Failed to fetch Instagram posts:', error)

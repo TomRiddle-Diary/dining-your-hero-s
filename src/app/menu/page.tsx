@@ -637,12 +637,12 @@ export default function MenuPage() {
                     <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center">
                       {/* Image */}
                       <div className="flex-shrink-0 mx-auto md:mx-0">
-                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-white shadow-lg p-2">
+                        <div className="w-56 h-56 md:w-48 md:h-48 rounded-full overflow-hidden bg-white shadow-lg p-2 transition-transform hover:scale-110 duration-300">
                           <Image
                             src={item.image}
                             alt={item.name}
-                            width={192}
-                            height={192}
+                            width={224}
+                            height={224}
                             className="w-full h-full object-contain"
                           />
                         </div>
