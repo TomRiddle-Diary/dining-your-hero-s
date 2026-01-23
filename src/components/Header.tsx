@@ -114,6 +114,14 @@ const Header = ({ isFixed = true }: HeaderProps) => {
               {/* Navigation Links */}
               <nav className="flex flex-col gap-6 mb-8">
                 <Link 
+                  href="/" 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
+                  style={{color: '#EEF5D3'}}
+                >
+                  HOME
+                </Link>
+                <Link 
                   href="/menu" 
                   onClick={() => setIsMenuOpen(false)}
                   className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 

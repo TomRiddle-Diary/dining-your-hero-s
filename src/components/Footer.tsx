@@ -36,6 +36,13 @@ const Footer = () => {
           {/* Center Column - Navigation Links */}
           <nav className="flex flex-col items-center gap-3 md:gap-4">
             <Link 
+              href="/"
+              className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+              style={{ color: '#EEF5D3' }}
+            >
+              HOME
+            </Link>
+            <Link 
               href="/menu"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
@@ -50,7 +57,7 @@ const Footer = () => {
               ABOUT US
             </Link>
             <Link 
-              href="/about"
+              href="/contact"
               className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
               style={{ color: '#EEF5D3' }}
             >
