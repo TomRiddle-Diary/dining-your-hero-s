@@ -48,9 +48,9 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Resendエラー:', error);
+      console.error('Resendエラー詳細:', JSON.stringify(error, null, 2));
       return NextResponse.json(
-        { error: 'メールの送信に失敗しました' },
+        { error: 'メールの送信に失敗しました', details: error.message || 'Unknown error' },
         { status: 500 }
       );
     }
