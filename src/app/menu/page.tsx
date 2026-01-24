@@ -72,7 +72,7 @@ const specialtyMenu: MenuItem[] = [
     id: 'cheese-fondue-dry-curry',
     name: 'チーズフォンデュドライカレー',
     description: 'チーズ好きにはたまらない！\nチーズマグマの海で泳ぎたい!!',
-    price: '900円',
+    price: '950円',
     note: '※スープ・サラダ付。',
     image: dryCurry,
   },
@@ -132,7 +132,7 @@ const donburiTeishokuMenu: MenuItem[] = [
   {
     id: 'turkey-rice',
     name: 'トルコライス',
-    price: '950円',
+    price: '900円',
   },
   {
     id: 'turkey-special',
@@ -148,7 +148,7 @@ const donburiTeishokuMenu: MenuItem[] = [
   {
     id: 'atugiri-rosu-katsu',
     name: '厚切りロースかつ定食',
-    price: '1,300円',
+    price: '900円',
     note: '※学生証提示で50円引き or ご飯大盛りサービス',
   },
   {
@@ -170,17 +170,17 @@ const donburiTeishokuMenu: MenuItem[] = [
   {
     id: 'taco-rice-plate',
     name: '沖縄名物タコライスプレート',
-    price: '850円',
+    price: '900円',
   },
   {
     id: 'loco-moco-plate',
     name: 'ハワイ名物ロコモコプレート',
-    price: '850円',
+    price: '900円',
   },
   {
     id: 'omurice-plate',
     name: 'オムライスプレート',
-    price: '900円',
+    price: '950円',
   },
 ];
 
@@ -204,12 +204,12 @@ const curryMenu: MenuItem[] = [
   {
     id: 'keema-curry',
     name: 'キーマカレー',
-    price: '850円',
+    price: '900円',
   },
   {
     id: 'yaki-curry',
     name: '焼きカレー',
-    price: '850円',
+    price: '900円',
   },
   {
     id: 'hamburg-doria',
@@ -242,7 +242,7 @@ const noodlesMenu: MenuItem[] = [
   {
     id: 'teppan-napolitan-tamago',
     name: '鉄板ナポリタンと玉子とじ',
-    price: '850円',
+    price: '900円',
   },
   {
     id: 'seafood-pescatore',
@@ -257,13 +257,13 @@ const noodlesMenu: MenuItem[] = [
   {
     id: 'napori-chan',
     name: 'ナポリちゃん',
-    price: '850円',
+    price: '900円',
     note: '※ちゃんぽん麺を使ったナポリタン',
   },
   {
     id: 'taco-meat-pasta',
     name: 'タコミートパスタ',
-    price: '900円',
+    price: '950円',
   },
   {
     id: 'yoshokuya-champon',
