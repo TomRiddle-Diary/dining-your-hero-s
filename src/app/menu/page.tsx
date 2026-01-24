@@ -6,6 +6,9 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+// Note: Metadata must be exported from a Server Component
+// Since this is 'use client', we'll add metadata via layout or separate metadata export
+
 // Import menu images
 import beefDon from '@/images/menu/beef_don.webp';
 import dryCurry from '@/images/menu/dry_curry.webp';
