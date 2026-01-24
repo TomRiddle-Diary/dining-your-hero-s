@@ -27,8 +27,8 @@ export async function POST(request: NextRequest) {
 
     // Resendでメール送信
     const { data, error } = await resend.emails.send({
-      from: 'Dining Your Heros <onboarding@resend.dev>',
-      to: 'bb123021@sun.ac.jp',
+      from: 'Dining Your Hero\'s <noreply@diningyourheros.com>',
+      to: 'yourhero.s0924@gmail.com',
       subject: `【ヒーローズ】お問い合わせ - ${name}様より`,
       html: `
         <h2>お問い合わせがありました</h2>
