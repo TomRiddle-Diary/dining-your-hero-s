@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://diningyourheros.com
+
+# Sitemaps
+Sitemap: https://diningyourheros.com/sitemap.xml
