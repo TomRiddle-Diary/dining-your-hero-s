@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         japanese: ["'Zen Kaku Gothic New'", "'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
         'japanese-body': ["'Noto Sans JP'", "'Hiragino Kaku Gothic ProN'", "'Meiryo'", 'sans-serif'],
+        'kaisei': ["'Kaisei Opti'", 'serif'],
       },
     },
   },

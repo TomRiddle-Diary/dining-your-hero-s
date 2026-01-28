@@ -49,7 +49,7 @@ body {
 }
 
 .category-scroll::-webkit-scrollbar {
-  height: 6px;
+  height: 4px;
 }
 
 .category-scroll::-webkit-scrollbar-track {
@@ -58,7 +58,7 @@ body {
 
 .category-scroll::-webkit-scrollbar-thumb {
   background: #CCCCCC;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .category-scroll::-webkit-scrollbar-thumb:hover {

@@ -8,14 +8,12 @@ import restaurantImage1 from '@/images/about/restaurant1.webp'
 import restaurantImage3 from '@/images/about/restaurant3.webp'
 import restaurantImage4 from '@/images/about/restaurant4.webp'
 import restaurantImage5 from '@/images/about/restaurant5.webp'
-import restaurantImage6 from '@/images/about/restaurant6.webp'
 
 const About = () => {
   // Array of images to flip through (add more images as needed)
   const images = [
     restaurantImage1,
     restaurantImage3,
-    restaurantImage6,
     restaurantImage4,
     restaurantImage5,
   ]

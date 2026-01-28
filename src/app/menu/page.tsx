@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { GiBowlOfRice, GiMeat, GiSteak, GiNoodles, GiCookingPot, GiSushis, GiBeerStein, GiPizzaSlice, GiCoffeeCup } from 'react-icons/gi';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -560,13 +560,52 @@ const drinksMenu: DrinkCategory[] = [
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>('specialty');
+  const categoryRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const menuSectionRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    // 初回マウント時はスクロールをスキップ
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    if (selectedCategory && categoryRefs.current[selectedCategory] && scrollContainerRef.current) {
+      const button = categoryRefs.current[selectedCategory];
+      const container = scrollContainerRef.current;
+      const buttonLeft = button.offsetLeft;
+      const buttonWidth = button.offsetWidth;
+      const containerWidth = container.offsetWidth;
+      
+      // ボタンを中央に配置するようにスクロール
+      const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+      
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+
+    // カテゴリ変更時にメニューセクションの一番上にスクロール
+    if (menuSectionRef.current) {
+      const menuTop = menuSectionRef.current.offsetTop;
+      // デスクトップとモバイルで異なるオフセットを適用
+      const offset = window.innerWidth >= 768 ? 160 : 120;
+      window.scrollTo({
+        top: menuTop - offset,
+        behavior: 'smooth'
+      });
+    }
+  }, [selectedCategory]);
 
   return (
     <>
       <Header isFixed={false} />
       <div className="min-h-screen bg-[#FFF3D4] pb-6 md:pb-12 px-4">
       {/* Header Section */}
-      <div className="max-w-6xl mx-auto text-center mb-8 pt-6 md:pt-12">
+      <div className="max-w-6xl mx-auto text-center mb-4 pt-6 md:pt-12">
         <h1 className="text-4xl md:text-5xl font-black text-[#0D4D4D] mb-4 tracking-wider">
           FIND <br />YOUR FAVORITE
         </h1>
@@ -578,25 +617,26 @@ export default function MenuPage() {
       {/* Category Navigation - Fixed */}
       <div className="sticky top-0 z-30 bg-[#FFF3D4] pb-4 pt-2">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-[60px] shadow-md p-1 md:p-4">
-            <div className="overflow-x-auto category-scroll">
-              <div className="flex gap-6 md:gap-12 min-w-max px-2">
+          <div className="bg-white rounded-[100px] border border-[#0B4943] p-1 md:p-4">
+            <div ref={scrollContainerRef} className="overflow-x-auto category-scroll">
+              <div className="flex gap-3 md:gap-12 min-w-max px-2">
               {categories.map((category) => {
                 const { Icon } = category;
                 const isSelected = selectedCategory === category.id;
                 return (
                   <button
                     key={category.id}
+                    ref={(el) => { categoryRefs.current[category.id] = el; }}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex flex-col items-center justify-center p-2 md:p-3 rounded-3xl transition-all hover:scale-105 min-w-[90px] ${
-                      isSelected ? '' : 'opacity-40'
+                      isSelected ? '' : 'opacity-30'
                     }`}
                   >
-                    <Icon className={`w-8 h-8 md:w-10 md:h-10 mb-2 transition-colors ${
-                      isSelected ? 'text-primary-green' : 'text-[#0D4D4D]'
+                    <Icon className={`w-8 h-8 md:w-10 md:h-10 mb-1 transition-colors ${
+                      isSelected ? 'text-[#0B4943]' : 'text-[#0B4943]'
                     }`} />
                     <span className={`text-sm md:text-base font-bold font-japanese whitespace-nowrap transition-colors ${
-                      isSelected ? 'text-primary-green' : 'text-[#0D4D4D]'
+                      isSelected ? 'text-[#0B4943] border-b-2 border-[#FF6B1A]' : 'text-[#0B4943]'
                     }`}>
                       {category.name}
                     </span>
@@ -611,7 +651,7 @@ export default function MenuPage() {
 
       {/* Menu Items Section */}
       {selectedCategory ? (
-        <div className="max-w-5xl mx-auto">
+        <div ref={menuSectionRef} className="max-w-5xl mx-auto">
           <div className="bg-[#FFF7E3] rounded-3xl shadow-md p-6 md:p-10">
             {/* Category Header */}
             <div className="text-center mb-8">

@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/8036d0d404.js" crossOrigin="anonymous" async></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LPBY4XY8T"></script>
         <script
