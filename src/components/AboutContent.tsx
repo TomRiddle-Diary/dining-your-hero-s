@@ -57,7 +57,7 @@ export default function AboutContent() {
         <h1 className="text-4xl md:text-5xl font-bold text-[#0D4D4D] mb-4 tracking-wider">
           MEET YOUR HERO&apos;S
         </h1>
-        <p className="text-xl md:text-3xl font-black text-[#FF6B1A] font-japanese">
+        <p className="text-2xl md:text-3xl lg:text-4xl font-black text-[#FF6B1A] font-japanese">
           ヒーローズの物語
         </p>
       </div>
@@ -146,10 +146,10 @@ export default function AboutContent() {
 
       {/* Brush Divider 3 - Left tilt */}
       <div className="block md:hidden">
-        <BrushDivider color="#D00000" />
+        <BrushDivider color="#0B4943" />
       </div>
       <div className="hidden md:block">
-        <BrushDividerDesktop color="#D00000" rotate={4} />
+        <BrushDividerDesktop color="#0B4943" rotate={4} />
       </div>
 
       {/* Section 3: 料理へのこだわり */}
@@ -174,7 +174,7 @@ export default function AboutContent() {
             </div>
             
             <div className="space-y-2 md:space-y-4 max-w-md">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-center md:text-left" style={{ color: '#D00000' }}>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-center md:text-left" style={{ color: '#0B4943' }}>
                 料理へのこだわり
               </h2>
               <p className="text-sm md:text-xl leading-relaxed text-left font-kaisei" style={{ color: '#1A0F08' }}>
@@ -187,13 +187,13 @@ export default function AboutContent() {
 
       {/* Final Brush Divider - Right tilt */}
       <div className="block md:hidden">
-        <BrushDivider color="#00B4D8" />
+        <BrushDivider color="#FA7115" />
       </div>
       <div className="hidden md:block">
-        <BrushDividerDesktop color="#00B4D8" rotate={-4} />
+        <BrushDividerDesktop color="#FA7115" rotate={-4} />
       </div>
 
-      {/* Section 4: 実は誰よりも気まぐれな料理人です */}
+      {/* Section 4: 実は誰よりも気さくな料理人です */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ export default function AboutContent() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
           <div className="flex flex-col md:flex-row gap-6 md:gap-4 lg:gap-12 items-center justify-center">
             <div className="space-y-2 md:space-y-4 order-2 md:order-1 max-w-md">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-center md:text-left" style={{ color: '#00B4D8' }}>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-center md:text-left" style={{ color: '#FA7115' }}>
                 実は誰よりも気さくな料理人です
               </h2>
               <p className="text-sm md:text-xl leading-relaxed text-left font-kaisei" style={{ color: '#1A0F08' }}>
