@@ -59,7 +59,7 @@ const specialtyMenu: MenuItem[] = [
     id: 'beef-steak-don',
     name: '山盛りステーキ丼',
     description: '柔らか赤身ステーキをガーリックバター醤油で召し上がりください。',
-    price: '1,300円',
+    price: '¥1,300',
     note: '※ご飯300g、牛肉は通常サイズの2倍になります。',
     image: beefDon,
   },
@@ -67,15 +67,15 @@ const specialtyMenu: MenuItem[] = [
     id: 'chicken-katsu-curry',
     name: '山盛りチキン勝つカレー',
     description: '学生必見！\nとにかくボリューミーな勝カレーをお楽しみください。',
-    price: '1,000円',
-    note: '※ご飯300g、チキンカツ300g、カレーソース200g。学生は900円。',
+    price: '¥1,000',
+    note: '※ご飯300g、チキンカツ300g、カレーソース200g。学生は¥900。',
     image: katsuryCurry,
   },
   {
     id: 'cheese-fondue-dry-curry',
     name: 'チーズフォンデュドライカレー',
     description: 'チーズ好きにはたまらない！\nチーズマグマの海で泳ぎたい!!',
-    price: '950円',
+    price: '¥950',
     note: '※スープ・サラダ付。',
     image: dryCurry,
   },
@@ -83,7 +83,7 @@ const specialtyMenu: MenuItem[] = [
     id: 'turkey-rice',
     name: 'トルコライス',
     description: '長崎名物トルコライス。\nカレー、ナポリタン、とんかつをワンプレートでお楽しみください。',
-    price: '900円',
+    price: '¥900',
     note: '※スープ付き。',
     image: turkeyRice,
   },
@@ -91,7 +91,7 @@ const specialtyMenu: MenuItem[] = [
     id: 'stamina-don',
     name: '豚スタ丼',
     description: 'ニンニクたっぷりスタミナ丼。\nガツンと元気注入!豚肉×ニンニクの極み。',
-    price: '800円',
+    price: '¥800',
     note: '※サイズ変更可。',
     image: staminaDon,
   },
@@ -101,28 +101,28 @@ const steakMenu: MenuItem[] = [
   {
     id: 'beef-steak-don-yamari',
     name: '山盛りステーキ丼',
-    price: '1,300円',
+    price: '¥1,300',
     note: '※ご飯300g、牛肉は通常サイズの2倍',
   },
   {
     id: 'beef-steak-don',
     name: '牛ステーキ丼',
-    price: '950円',
+    price: '¥950',
   },
   {
     id: 'beef-steak-chahan',
     name: '牛ステーキチャーハン',
-    price: '1,250円',
+    price: '¥1,250',
   },
   {
     id: 'beef-cut-steak-set',
     name: '牛カットステーキset',
-    price: '1,800円',
+    price: '¥1,800',
   },
   {
     id: 'pork-loin-steak-set',
     name: '豚ロースステーキset',
-    price: '1,200円',
+    price: '¥1,200',
   },
 ];
 
@@ -130,60 +130,60 @@ const donburiTeishokuMenu: MenuItem[] = [
   {
     id: 'buta-suta-don',
     name: '豚スタ丼',
-    price: '800円',
+    price: '¥800',
   },
   {
     id: 'turkey-rice',
     name: 'トルコライス',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'turkey-special',
     name: 'トルコスペシャル',
-    price: '1,300円',
+    price: '¥1,300',
     note: '※ハンバーグとエビフライ付',
   },
   {
     id: 'chicken-tomato-cheese',
     name: 'チキンのトマトチーズ焼き',
-    price: '850円',
+    price: '¥850',
   },
   {
     id: 'atugiri-rosu-katsu',
     name: '厚切りロースかつ定食',
-    price: '900円',
-    note: '※学生証提示で50円引き or ご飯大盛りサービス',
+    price: '¥900',
+    note: '※学生証提示で¥50引き or ご飯大盛りサービス',
   },
   {
     id: 'rosu-katsu-teishoku',
     name: 'ロース勝つ丼定食',
-    price: '850円',
-    note: '※学生証提示で50円引き or ご飯大盛りサービス',
+    price: '¥850',
+    note: '※学生証提示で¥50引き or ご飯大盛りサービス',
   },
   {
     id: 'garibata-chicken-don',
     name: 'ガリバタチキン丼',
-    price: '850円',
+    price: '¥850',
   },
   {
     id: 'teppan-buta-kimchi',
     name: '鉄板豚キムチ定食',
-    price: '950円',
+    price: '¥950',
   },
   {
     id: 'taco-rice-plate',
     name: '沖縄名物タコライスプレート',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'loco-moco-plate',
     name: 'ハワイ名物ロコモコプレート',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'omurice-plate',
     name: 'オムライスプレート',
-    price: '950円',
+    price: '¥950',
   },
 ];
 
@@ -191,43 +191,43 @@ const curryMenu: MenuItem[] = [
   {
     id: 'yamari-chicken-katsu-curry',
     name: '山盛りチキン勝つカレー',
-    price: '1,000円',
+    price: '¥1,000',
   },
   {
     id: 'cheese-fondue-dry-curry',
     name: 'チーズフォンデュドライカレー',
-    price: '950円',
+    price: '¥950',
   },
   {
     id: 'rosu-katsu-curry',
     name: 'ロース勝つカレー',
-    price: '850円',
-    note: '※学生証提示で50円引き or ご飯大盛りサービス',
+    price: '¥850',
+    note: '※学生証提示で¥50引き or ご飯大盛りサービス',
   },
   {
     id: 'keema-curry',
     name: 'キーマカレー',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'yaki-curry',
     name: '焼きカレー',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'hamburg-doria',
     name: 'ハンバーグドリア',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'chicken-doria',
     name: 'チキンドリア',
-    price: '850円',
+    price: '¥850',
   },
   {
     id: 'meat-sauce-doria',
     name: 'ミートソースドリア',
-    price: '850円',
+    price: '¥850',
   },
 ];
 
@@ -235,43 +235,43 @@ const noodlesMenu: MenuItem[] = [
   {
     id: 'ebi-bacon-cream',
     name: '海老とベーコンのクリーム',
-    price: '950円',
+    price: '¥950',
   },
   {
     id: 'asari-peperoncino',
     name: 'アサリごろごろペペロンチーノ',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'teppan-napolitan-tamago',
     name: '鉄板ナポリタンと玉子とじ',
-    price: '900円',
+    price: '¥900',
   },
   {
     id: 'seafood-pescatore',
     name: '海鮮ペスカトーレ',
-    price: '1,000円',
+    price: '¥1,000',
   },
   {
     id: 'bolognese',
     name: 'ボロネーゼ',
-    price: '800円',
+    price: '¥800',
   },
   {
     id: 'napori-chan',
     name: 'ナポリちゃん',
-    price: '900円',
+    price: '¥900',
     note: '※ちゃんぽん麺を使ったナポリタン',
   },
   {
     id: 'taco-meat-pasta',
     name: 'タコミートパスタ',
-    price: '950円',
+    price: '¥950',
   },
   {
     id: 'yoshokuya-champon',
     name: '洋食屋のちゃんぽん',
-    price: '850円',
+    price: '¥850',
   },
 ];
 
@@ -279,37 +279,37 @@ const pizzaMenu: MenuItem[] = [
   {
     id: 'sasebo-jumbo-garlic',
     name: '佐世保ジャンボニンニク',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'kinoko-bacon',
     name: 'きのこベーコン',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'potato-salad',
     name: 'ポテトサラダ',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'sweet-corn-bacon',
     name: 'スイートコーンとベーコン',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'nama-ham-tomato',
     name: '生ハムトマト',
-    price: '750円',
+    price: '¥750',
   },
   {
     id: 'teriyaki-chicken',
     name: '照り焼きチキン',
-    price: '750円',
+    price: '¥750',
   },
   {
     id: 'german-potato',
     name: 'ジャーマンポテト',
-    price: '750円',
+    price: '¥750',
   },
 ];
 
@@ -317,116 +317,116 @@ const appetizersMenu: MenuItem[] = [
   {
     id: 'kibinago-tempura',
     name: 'キビナゴの天ぷら',
-    price: '500円',
+    price: '¥500',
   },
   {
     id: 'asari-butter',
     name: 'アサリバター',
-    price: '500円',
+    price: '¥500',
   },
   {
     id: 'tebasaki-karaage',
     name: 'やみつき手羽先唐揚げ',
-    price: '600円',
+    price: '¥600',
   },
   {
     id: 'ika-karaage',
     name: 'いかの唐揚げ',
-    price: '500円',
+    price: '¥500',
   },
   {
     id: 'yaki-ramen',
     name: '焼きラーメン',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'otona-ebisen',
     name: '大人の海老せん',
-    price: '500円',
+    price: '¥500',
   },
   {
     id: 'garlic-edamame',
     name: 'ガーリック枝豆',
-    price: '500円',
+    price: '¥500',
   },
   {
     id: 'omakase-salad',
     name: 'おまかせサラダ',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'jumbo-garlic-kinoko-ahijo',
     name: 'ジャンボニンニクときのこのアヒージョ',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'sunazuri-ahijo',
     name: '砂ズリのアヒージョ',
-    price: '700円',
+    price: '¥700',
   },
   {
     id: 'ebi-ahijo',
     name: '海老のアヒージョ',
-    price: '800円',
+    price: '¥800',
   },
   {
     id: 'shoestring-potato',
     name: 'シューストリングポテトフライ',
-    price: '600円',
+    price: '¥600',
   },
   {
     id: 'genki-ebi-mayo',
     name: '元気な海老マヨ',
-    price: '750円',
+    price: '¥750',
   },
   {
     id: 'tako-carpaccio',
     name: 'たこのカルパッチョ',
-    price: '750円',
+    price: '¥750',
   },
   {
     id: 'hotate-carpaccio',
     name: '帆立貝柱のカルパッチョ',
-    price: '800円',
-    note: '※ハーフ450円',
+    price: '¥800',
+    note: '※ハーフ¥450',
   },
   {
     id: 'dashimaki-tamago',
     name: '手作りだし巻き玉子',
-    price: '650円',
-    note: '※+100円でチーズトッピング',
+    price: '¥650',
+    note: '※+¥100でチーズトッピング',
   },
   {
     id: 'karaage-yourinchi',
     name: '若鶏の唐揚げユーリンチーソース',
-    price: '700円',
-    note: '※ハーフ400円',
+    price: '¥700',
+    note: '※ハーフ¥400',
   },
   {
     id: 'chicken-steak-garibata',
     name: '若鶏のステーキガリバタソース',
-    price: '750円',
+    price: '¥750',
   },
   {
     id: 'beef-kakugiri-garibata',
     name: '牛肉の角切りステーキガリバタソース',
-    price: '800円',
+    price: '¥800',
   },
   {
     id: 'beef-tataki-ponzu',
     name: '牛肉のタタキポン酢ソース',
-    price: '800円',
+    price: '¥800',
   },
   {
     id: 'miyazaki-chicken-nanban',
     name: '宮崎名物チキン南蛮',
-    price: '700円',
-    note: '※ハーフ400円',
+    price: '¥700',
+    note: '※ハーフ¥400',
   },
   {
     id: 'kamo-smoke',
     name: 'カモのスモーク',
-    price: '600円',
+    price: '¥600',
   },
 ];
 
@@ -434,33 +434,33 @@ const cafeMenu: MenuItem[] = [
   {
     id: 'fruits-parfait',
     name: 'フルーツパフェ',
-    price: '600円',
+    price: '¥600',
     note: '※フルーツは季節により変わります',
   },
   {
     id: 'soda-float',
     name: 'ソーダフロート',
-    price: '450円',
+    price: '¥450',
   },
   {
     id: 'coffee-float',
     name: 'コーヒーフロート',
-    price: '450円',
+    price: '¥450',
   },
   {
     id: 'wiener-coffee',
     name: 'ウインナーコーヒー',
-    price: '450円',
+    price: '¥450',
   },
   {
     id: 'nouko-cocoa',
     name: '濃厚ココア',
-    price: '550円',
+    price: '¥550',
   },
   {
     id: 'ice-cocoa',
     name: 'アイスココア',
-    price: '550円',
+    price: '¥550',
   },
 ];
 
@@ -472,88 +472,103 @@ const drinksMenu: DrinkCategory[] = [
       {
         id: 'draft-beer',
         name: '生ビール（アサヒ）',
-        sizes: { large: '650円', medium: '500円', small: '350円' },
+        sizes: { large: '¥700', medium: '¥550', small: '¥400' },
       },
+    ],
+  },
+  {
+    id: 'non-alcoholic-beer',
+    category: '▪ノンアルコールビール',
+    drinks: [
+      { id: 'asahi-dry-zero', name: 'アサヒドライゼロ', price: '¥400' },
     ],
   },
   {
     id: 'highball',
     category: '▪ハイボール',
     drinks: [
-      { id: 'black-nikka-clear', name: 'ブラックニッカクリア', price: '400円' },
-      { id: 'ginger-highball', name: 'ジンジャーハイ', price: '400円' },
-      { id: 'black', name: 'ブラック', price: '400円' },
+      { id: 'black-nikka-clear', name: 'ブラックニッカクリア', price: '¥450' },
+      { id: 'ginger-highball', name: 'ジンジャーハイ', price: '¥450' },
+      { id: 'black', name: 'ブラック', price: '¥450' },
     ],
   },
   {
     id: 'sour',
     category: '▪サワー',
     drinks: [
-      { id: 'lemon', name: 'レモン', price: '400円' },
-      { id: 'lime', name: 'ライム', price: '400円' },
-      { id: 'calpis', name: 'カルピス', price: '400円' },
-      { id: 'apple', name: '青りんご', price: '400円' },
-      { id: 'shikuwasa', name: 'シークヮーサー', price: '400円' },
-      { id: 'grapefruit', name: 'グレープフルーツ', price: '400円' },
-      { id: 'peach', name: '桃', price: '400円' },
-      { id: 'grape', name: '巨峰', price: '400円' },
+      { id: 'lemon', name: 'レモン', price: '¥450' },
+      { id: 'lime', name: 'ライム', price: '¥450' },
+      { id: 'calpis', name: 'カルピス', price: '¥450' },
+      { id: 'apple', name: '青りんご', price: '¥450' },
+      { id: 'shikuwasa', name: 'シークヮーサー', price: '¥450' },
+      { id: 'grapefruit', name: 'グレープフルーツ', price: '¥450' },
+      { id: 'peach', name: '桃', price: '¥450' },
+      { id: 'grape', name: '巨峰', price: '¥450' },
     ],
   },
   {
     id: 'cocktail',
     category: '▪カクテル',
     drinks: [
-      { id: 'cassis-soda', name: 'カシスソーダ', price: '450円' },
-      { id: 'cassis-orange', name: 'カシスオレンジ', price: '450円' },
-      { id: 'fuzzy-navel', name: 'ファジーネーブル', price: '450円' },
-      { id: 'gin-tonic', name: 'ジントニック', price: '450円' },
-      { id: 'moscow-mule', name: 'モスコミュール', price: '450円' },
+      { id: 'cassis-soda', name: 'カシスソーダ', price: '¥500' },
+      { id: 'cassis-orange', name: 'カシスオレンジ', price: '¥500' },
+      { id: 'fuzzy-navel', name: 'ファジーネーブル', price: '¥500' },
+      { id: 'gin-tonic', name: 'ジントニック', price: '¥500' },
+      { id: 'moscow-mule', name: 'モスコミュール', price: '¥500' },
     ],
   },
   {
     id: 'wine',
     category: '▪ワイン',
     drinks: [
-      { id: 'wine-glass', name: 'グラス', price: '350円' },
-      { id: 'wine-carafe', name: 'カラフェ', price: '1,000円' },
+      { id: 'wine-glass', name: 'グラス', price: '¥400' },
+      { id: 'wine-carafe', name: 'カラフェ', price: '¥1,200' },
     ],
   },
   {
     id: 'shochu',
     category: '▪焼酎',
     drinks: [
-      { id: 'shochu-glass', name: 'グラス', price: '450円' },
-      { id: 'shochu-bottle', name: '飲みきりボトル', price: '2,400円' },
+      { id: 'shochu-glass', name: 'グラス', price: '¥500' },
+      { id: 'shochu-bottle', name: '飲みきりボトル', price: '¥2,600' },
+      { id: 'shochu-iki', name: '壱岐', price: '¥3,000' },
+    ],
+  },
+  {
+    id: 'sake',
+    category: '▪日本酒',
+    drinks: [
+      { id: 'sake-ichigo', name: '1合', price: '¥500' },
     ],
   },
   {
     id: 'umeshu',
     category: '▪梅酒',
     drinks: [
-      { id: 'umeshu-rock', name: 'ロック', price: '400円' },
-      { id: 'umeshu-soda', name: 'ソーダ', price: '400円' },
+      { id: 'umeshu-rock', name: 'ロック', price: '¥450' },
+      { id: 'umeshu-soda', name: 'ソーダ', price: '¥450' },
     ],
   },
   {
     id: 'others',
     category: '▪その他',
     drinks: [
-      { id: 'gin', name: 'ジン', price: '500円' },
-      { id: 'vodka', name: 'ウォッカ', price: '500円' },
-      { id: 'tequila', name: 'テキーラ', price: '500円' },
+      { id: 'gin', name: 'ジン', price: '¥500' },
+      { id: 'vodka', name: 'ウォッカ', price: '¥500' },
+      { id: 'tequila', name: 'テキーラ', price: '¥500' },
     ],
   },
   {
     id: 'soft-drink',
     category: '▪ソフトドリンク',
     drinks: [
-      { id: 'coca-cola', name: 'コカコーラ', price: '250円' },
-      { id: 'oolong-tea', name: 'ウーロン茶', price: '250円' },
-      { id: 'ginger-ale', name: 'ジンジャーエール', price: '250円' },
-      { id: 'calpis-drink', name: 'カルピス', price: '250円' },
-      { id: 'calpis-soda', name: 'カルピスソーダ', price: '250円' },
-      { id: 'coffee', name: 'コーヒー', price: '250円' },
-      { id: 'tea', name: '紅茶', price: '250円' },
+      { id: 'coca-cola', name: 'コカコーラ', price: '¥300' },
+      { id: 'oolong-tea', name: 'ウーロン茶', price: '¥300' },
+      { id: 'ginger-ale', name: 'ジンジャーエール', price: '¥300' },
+      { id: 'calpis-drink', name: 'カルピス', price: '¥300' },
+      { id: 'calpis-soda', name: 'カルピスソーダ', price: '¥300' },
+      { id: 'coffee', name: 'コーヒー', price: '¥300' },
+      { id: 'tea', name: '紅茶', price: '¥300' },
     ],
   },
 ];
@@ -724,7 +739,7 @@ export default function MenuPage() {
                 {steakMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -751,7 +766,7 @@ export default function MenuPage() {
                 {donburiTeishokuMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -778,7 +793,7 @@ export default function MenuPage() {
                 {curryMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -805,7 +820,7 @@ export default function MenuPage() {
                 {noodlesMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -832,7 +847,7 @@ export default function MenuPage() {
                 {pizzaMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -859,7 +874,7 @@ export default function MenuPage() {
                 {appetizersMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -886,7 +901,7 @@ export default function MenuPage() {
                 {cafeMenu.map((item, index) => (
                   <div key={item.id}>
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-2 font-japanese">
+                      <h3 className="text-lg md:text-xl font-semibold text-black mb-2 font-japanese">
                         {item.name}
                       </h3>
                       <hr className="border-t-2 border-black mb-2" />
@@ -922,7 +937,7 @@ export default function MenuPage() {
                       {category.drinks.map((drink) => (
                         <div key={drink.id}>
                           <div>
-                            <h4 className="text-base md:text-lg font-bold text-black mb-2 font-japanese">
+                            <h4 className="text-base md:text-lg font-semibold text-black mb-2 font-japanese">
                               {drink.name}
                             </h4>
                             <hr className="border-t-2 border-black mb-2" />
