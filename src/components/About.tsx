@@ -5,17 +5,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import restaurantImage1 from '@/images/about/restaurant1.webp'
+import restaurantImage2 from '@/images/about/restaurant2.webp'
 import restaurantImage3 from '@/images/about/restaurant3.webp'
 import restaurantImage4 from '@/images/about/restaurant4.webp'
 import restaurantImage5 from '@/images/about/restaurant5.webp'
+import restaurantImage6 from '@/images/about/restaurant6.webp'
 
 const About = () => {
   // Array of images to flip through (add more images as needed)
   const images = [
     restaurantImage1,
     restaurantImage3,
+    restaurantImage2,
     restaurantImage4,
     restaurantImage5,
+    restaurantImage6
   ]
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -117,7 +121,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              佐世保市にある『Dining your HERO&apos;s』は、ランチからディナーまで、手頃な価格でボリューム満点の料理を楽しめるカジュアルな洋食屋です。
+              佐世保市にある『Dining your HERO&apos;s』は、ランチからディナーまで、手頃な価格でボリューム満点の料理を楽しめるカジュアルな洋食レストランです。
 お子様ランチのご用意や学割制度もあり、ご家族連れや学生さんなど、幅広い世代の方に日常使いしていただける空間作りを大切にしています。また、お酒のメニューも充実しており、女子会や忘新年会といった団体様のご予約も承っております。
 お一人様でもグループでも、いつでも気軽にお立ち寄りください
             </motion.p>

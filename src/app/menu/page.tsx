@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { GiBowlOfRice, GiMeat, GiSteak, GiNoodles, GiCookingPot, GiSushis, GiBeerStein, GiPizzaSlice, GiCoffeeCup } from 'react-icons/gi';
+import { GiBowlOfRice, GiMeal, GiSteak, GiNoodles, GiSpoon, GiShrimp, GiBeerStein, GiPizzaSlice, GiCoffeeCup } from 'react-icons/gi';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -20,11 +20,11 @@ const categories = [
   { id: 'specialty', name: '名物', Icon: GiBowlOfRice },
   { id: 'drinks', name: 'ドリンク', Icon: GiBeerStein },
   { id: 'steak', name: 'ステーキ', Icon: GiSteak },
-  { id: 'donburi-teishoku', name: '丼・定食', Icon: GiMeat },
-  { id: 'curry', name: 'カレー', Icon: GiCookingPot },
+  { id: 'donburi-teishoku', name: '丼・定食', Icon: GiMeal },
+  { id: 'curry', name: 'カレー', Icon: GiSpoon },
   { id: 'noodles', name: '麺', Icon: GiNoodles },
   { id: 'pizza', name: 'ピザ', Icon: GiPizzaSlice },
-  { id: 'appetizers', name: 'おつまみ', Icon: GiSushis },
+  { id: 'appetizers', name: 'おつまみ', Icon: GiShrimp },
   { id: 'cafe', name: 'カフェ', Icon: GiCoffeeCup },
 ];
 
@@ -675,23 +675,23 @@ export default function MenuPage() {
         </div>
       </div>
 
-      {/* Menu Items Section */}
-      {selectedCategory ? (
-        <div ref={menuSectionRef} className="max-w-5xl mx-auto">
+        {/* Menu Items Section */}
+        {selectedCategory ? (
+          <div ref={menuSectionRef} className="max-w-5xl mx-auto">
           <div className="bg-[#FFF7E3] rounded-3xl shadow-md p-6 md:p-10">
             {/* Category Header */}
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-black text-[#0D4D4D] mb-2 font-japanese">
+            <div className="mb-8">
+              <h2 className="text-center text-2xl md:text-3xl font-black text-[#0D4D4D] mb-2 font-japanese">
                 {categories.find((c) => c.id === selectedCategory)?.name}
               </h2>
-              <p className="text-base md:text-lg text-[#FF6B1A] font-bold font-japanese mt-2">
+              <p className="text-center text-base md:text-lg text-[#FF6B1A] font-bold font-japanese mt-2">
                 {selectedCategory === 'specialty' && '当店自慢の看板メニュー'}
                 {selectedCategory === 'steak' && '豪快にジューシーに、肉の旨みを堪能'}
                 {selectedCategory === 'donburi-teishoku' && 'ボリューム満点！満腹間違いなし'}
-                {selectedCategory === 'curry' && 'こだわりのカレー＆ドリア'}
-                {selectedCategory === 'noodles' && 'もちもち麺が絡む至福のパスタ'}
+                {selectedCategory === 'curry' && '濃厚カレー＆熱々ドリア'}
+                {selectedCategory === 'noodles' && '濃厚ソースが絡む自慢の麺料理'}
                 {selectedCategory === 'pizza' && 'カリッと香ばしく、焼きたてアツアツ'}
-                {selectedCategory === 'appetizers' && 'お酒のお供に最高の一品'}
+                {selectedCategory === 'appetizers' && 'シェアして楽しむ、おつまみ＆一品料理'}
                 {selectedCategory === 'cafe' && 'ほっと一息、甘いひととき'}
                 {selectedCategory === 'drinks' && '乾杯から締めまで、豊富な品揃え'}
               </p>
@@ -940,14 +940,14 @@ export default function MenuPage() {
                 <div className="bg-[#FFFFFF] border-2 border-[#0D4D4D] rounded-xl p-6 md:p-8 shadow-lg">
                   <div className="space-y-4">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
-                      <h4 className="text-xl md:text-2xl font-black text-[#0D4D4D] font-japanese">
+                      <h4 className="text-lg md:text-2xl font-black text-[#0D4D4D] font-japanese">
                         🍻 飲み放題 (90分)
                       </h4>
-                      <p className="text-2xl md:text-3xl font-black text-black">
+                      <p className="text-xl md:text-3xl font-black text-black">
                         ¥2,100
                       </p>
                     </div>
-                    <div className="space-y-2 text-sm md:text-base text-black font-japanese">
+                    <div className="space-y-2 text-xs md:text-base text-black font-japanese">
                       <p className="flex items-start">
                         <span className="text-[#FF6B1A] mr-2 font-bold">✓</span>
                         <span>日本酒以外のドリンク全メニューOK</span>
@@ -958,7 +958,7 @@ export default function MenuPage() {
                       </p>
                       <p className="flex items-start">
                         <span className="text-[#FF6B1A] mr-2 font-bold">✓</span>
-                        <span>5名様以上のご利用は前日までのご予約</span>
+                        <span>5名様以上のご利用は前日までのご予約必須</span>
                       </p>
                     </div>
                   </div>
@@ -1029,13 +1029,21 @@ export default function MenuPage() {
             )}
           </div>
         </div>
-      ) : (
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-xl md:text-2xl font-bold text-[#0D4D4D] font-japanese">
-            カテゴリーを選択してメニューを表示
-          </p>
+        ) : (
+          <div className="max-w-6xl mx-auto text-center">
+            <p className="text-xl md:text-2xl font-bold text-[#0D4D4D] font-japanese">
+              カテゴリーを選択してメニューを表示
+            </p>
+          </div>
+        )}
+
+        {/* Price Notice */}
+        <div className="max-w-4xl mx-auto mt-8 px-4">
+          <div className="text-left text-sm md:text-base text-gray-600 font-japanese space-y-1">
+            <p>※ 表示価格はすべて税込みです</p>
+            <p>※ 日によって価格や盛り付けが変わる場合がございます</p>
+          </div>
         </div>
-      )}
       </div>
       <Footer />
     </>

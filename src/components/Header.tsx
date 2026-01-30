@@ -116,34 +116,34 @@ const Header = ({ isFixed = true }: HeaderProps) => {
                 <Link 
                   href="/" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
+                  className="font-japanese font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
                   style={{color: '#EEF5D3'}}
                 >
-                  HOME
+                  ホーム
                 </Link>
                 <Link 
                   href="/menu" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
+                  className="font-japanese font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
                   style={{color: '#EEF5D3'}}
                 >
-                  MENU
+                  メニュー
                 </Link>
                 <Link 
                   href="/about" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
+                  className="font-japanese font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
                   style={{color: '#EEF5D3'}}
                 >
-                  ABOUT US
+                  当店について
                 </Link>
                 <Link 
                   href="/contact" 
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
+                  className="font-japanese font-bold text-2xl tracking-wide hover:opacity-80 transition-opacity py-2 border-b border-white/20" 
                   style={{color: '#EEF5D3'}}
                 >
-                  CONTACT
+                  お問い合わせ
                 </Link>
               </nav>
 
