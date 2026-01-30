@@ -2,13 +2,12 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Store, Users, CigaretteOff } from 'lucide-react'
-import cheersImage from '@/images/bounenkai/cheers.webp'
+import { ChefHat, Heart, School } from 'lucide-react'
+import bentouImage from '@/images/bentou/bentou.jpg'
 
-const Bounenkai = () => {
+const Bentou = () => {
   return (
-    <section className="py-6 md:py-12 relative" style={{ backgroundColor: '#FFF3D4' }}>
+    <section className="py-6 md:py-12 relative" style={{ backgroundColor: '#FFF7E3' }}>
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -20,10 +19,10 @@ const Bounenkai = () => {
           className="text-center mb-8 md:mb-10 lg:mb-12 "
         >
           <h2 className="text-4xl lg:text-5xl font-bold uppercase text-primary-orange">
-            HOST YOUR PARTY
+            BENTO & CATERING
           </h2>
           <p className="text-xl md:text-3xl font-black text-primary-green font-japanese mt-2 sm:mt-4 md:mt-6">
-            佐世保で飲み会・忘年会ならヒーローズへ！
+            手作り弁当・オードブル承ります
           </p>
         </motion.div>
 
@@ -39,8 +38,8 @@ const Bounenkai = () => {
             className="relative w-full aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-lg"
           >
             <Image
-              src={cheersImage}
-              alt="忘年会・新年会 - ヒーローズで乾杯"
+              src={bentouImage}
+              alt="手作り弁当・オードブル - ヒーローズの特製弁当・パーティー用オードブル"
               fill
               className="object-cover"
             />
@@ -56,39 +55,35 @@ const Bounenkai = () => {
           >
             <div className="bg-white rounded-xl p-6 md:p-8 shadow-md font-japanese w-full">
               <h3 className="text-xl md:text-3xl font-bold text-primary-green mb-6 text-center">
-                【お席のご案内】
+                【テイクアウトのご案内】
               </h3>
               
               <div className="space-y-6 text-black">
 
-                <div className="space-y-2">
-                  <div className="flex items-center gap-4">
-                    <Store size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <p className="text-base md:text-lg font-bold text-red-600">
-                        貸切OK!
-                      </p>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-4">
+                    <ChefHat size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
+                    <p className="text-base md:text-lg font-bold text-red-600">
+                        弁当500円〜 <br /> オードブル6,000円〜
+                    </p>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <Users size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
+                  <Heart size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
                   <p className="text-base md:text-lg leading-relaxed font-medium">
-                    着席時25名、立食時35名最大まで可能です。
+                    お客様の予算と食べたいものをお聞きして、一つ一つ丁寧にお作りします。
                   </p>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <CigaretteOff size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
+                  <School size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
                   <p className="text-base md:text-lg leading-relaxed font-medium">
-                    全席禁煙ですので、お子様連れでも安心してお越しください。
+                    イベントや学校行事でぜひ利用してください！
                   </p>
                 </div>
 
                 <div className="pt-4 mt-6 border-t border-gray-200">
                   <p className="text-sm md:text-base font-japanese-body text-left">
-                    『今年の忘年会、どうしよう？』とお悩みの幹事様。 2〜3名様の小さな集まりから、お店を貸し切った大きなパーティまで、 人数に合わせた最適なプランをご提案します。まずは気軽にご相談ください！
+                    学校行事からイベント、ご家族の集まりまで、長年多くのお客様にご利用いただいております。人数や予算に合わせて柔軟に対応します、まずは気軽にご相談ください！
                   </p>
                 </div>
               </div>
@@ -100,4 +95,4 @@ const Bounenkai = () => {
   )
 }
 
-export default Bounenkai
+export default Bentou

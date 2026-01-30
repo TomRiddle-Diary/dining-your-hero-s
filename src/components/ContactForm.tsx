@@ -101,7 +101,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-16 bg-[#FFF3D4]">
+    <section id="contact" className="py-12 md:py-16 bg-[#FFF7E3]">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeader color="text-primary-green">CONTACT US</SectionHeader>
         <motion.p

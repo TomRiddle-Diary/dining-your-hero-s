@@ -60,7 +60,7 @@ const Instagram = () => {
   }, [])
 
   return (
-    <section className="py-6 md:py-12  relative" style={{ backgroundColor: '#FFF7E3' }}>
+    <section className="py-6 md:py-12  relative" style={{ backgroundColor: '#FFF3D4' }}>
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         
         {/* Header */}
