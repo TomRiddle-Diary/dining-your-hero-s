@@ -63,7 +63,7 @@ const Bentou = () => {
                 <div className="flex items-center gap-4">
                     <ChefHat size={50} className="text-primary-green flex-shrink-0" strokeWidth={1.5} />
                     <p className="text-base md:text-lg font-bold text-red-600">
-                        弁当500円〜 <br /> オードブル6,000円〜
+                        弁当 500円〜 <br /> オードブル 6,000円〜
                     </p>
                 </div>
 
@@ -84,6 +84,9 @@ const Bentou = () => {
                 <div className="pt-4 mt-6 border-t border-gray-200">
                   <p className="text-sm md:text-base font-japanese-body text-left">
                     学校行事からイベント、ご家族の集まりまで、長年多くのお客様にご利用いただいております。人数や予算に合わせて柔軟に対応します、まずは気軽にご相談ください！
+                  </p>
+                  <p className="text-xs text-gray-500 mt-3 font-japanese-body">
+                    ※出前は基本やっていないので、別途相談をお願いします。
                   </p>
                 </div>
               </div>

@@ -18,6 +18,7 @@ import turkeyRice from '@/images/menu/turkey_rice.webp';
 
 const categories = [
   { id: 'specialty', name: '名物', Icon: GiBowlOfRice },
+  { id: 'drinks', name: 'ドリンク', Icon: GiBeerStein },
   { id: 'steak', name: 'ステーキ', Icon: GiSteak },
   { id: 'donburi-teishoku', name: '丼・定食', Icon: GiMeat },
   { id: 'curry', name: 'カレー', Icon: GiCookingPot },
@@ -25,7 +26,6 @@ const categories = [
   { id: 'pizza', name: 'ピザ', Icon: GiPizzaSlice },
   { id: 'appetizers', name: 'おつまみ', Icon: GiSushis },
   { id: 'cafe', name: 'カフェ', Icon: GiCoffeeCup },
-  { id: 'drinks', name: 'ドリンク', Icon: GiBeerStein },
 ];
 
 interface MenuItem {
@@ -465,6 +465,17 @@ const cafeMenu: MenuItem[] = [
 ];
 
 const drinksMenu: DrinkCategory[] = [
+  {
+    id: 'nomihoudai',
+    category: '🍻 飲み放題プラン',
+    drinks: [
+      {
+        id: 'nomihoudai-plan',
+        name: '飲み放題（90分）',
+        price: '¥2,100',
+      },
+    ],
+  },
   {
     id: 'beer',
     category: '▪ビール',
@@ -925,16 +936,47 @@ export default function MenuPage() {
               </div>
             ) : selectedCategory === 'drinks' ? (
               <div className="space-y-10 max-w-3xl mx-auto">
+                {/* Special highlight box for 飲み放題 */}
+                <div className="bg-[#FFFFFF] border-2 border-[#0D4D4D] rounded-xl p-6 md:p-8 shadow-lg">
+                  <div className="space-y-4">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
+                      <h4 className="text-xl md:text-2xl font-black text-[#0D4D4D] font-japanese">
+                        🍻 飲み放題 (90分)
+                      </h4>
+                      <p className="text-2xl md:text-3xl font-black text-black">
+                        ¥2,100
+                      </p>
+                    </div>
+                    <div className="space-y-2 text-sm md:text-base text-black font-japanese">
+                      <p className="flex items-start">
+                        <span className="text-[#FF6B1A] mr-2 font-bold">✓</span>
+                        <span>日本酒以外のドリンク全メニューOK</span>
+                      </p>
+                      <p className="flex items-start">
+                        <span className="text-[#FF6B1A] mr-2 font-bold">✓</span>
+                        <span>お一人様1品以上のフードオーダー</span>
+                      </p>
+                      <p className="flex items-start">
+                        <span className="text-[#FF6B1A] mr-2 font-bold">✓</span>
+                        <span>5名様以上のご利用は前日までのご予約</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 {drinksMenu.map((category, categoryIndex) => (
                   <div key={category.id}>
-                    {/* Category Title */}
-                    <h3 className="text-xl md:text-2xl font-black text-black mb-6 font-japanese">
-                      {category.category}
-                    </h3>
-                    
-                    {/* Drinks in Category */}
-                    <div className="space-y-8 pl-4">
-                      {category.drinks.map((drink) => (
+                    {/* Skip nomihoudai in the regular list */}
+                    {category.id === 'nomihoudai' ? null : (
+                      <>
+                        {/* Category Title */}
+                        <h3 className="text-xl md:text-2xl font-bold text-black mb-6 font-japanese">
+                          {category.category}
+                        </h3>
+                        
+                        {/* Drinks in Category */}
+                        <div className="space-y-8 pl-4">
+                          {category.drinks.map((drink) => (
                         <div key={drink.id}>
                           <div>
                             <h4 className="text-base md:text-lg font-semibold text-black mb-2 font-japanese">
@@ -973,6 +1015,8 @@ export default function MenuPage() {
                         </div>
                       ))}
                     </div>
+                      </>
+                    )}
                   </div>
                 ))}
               </div>
