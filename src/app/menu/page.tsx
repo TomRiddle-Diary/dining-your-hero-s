@@ -60,7 +60,7 @@ const specialtyMenu: MenuItem[] = [
     name: '山盛りステーキ丼',
     description: '柔らか赤身ステーキをガーリックバター醤油で召し上がりください。',
     price: '¥1,300',
-    note: '※ご飯300g、牛肉は通常サイズの2倍になります。',
+    note: '※ご飯300g、牛肉は通常サイズの2倍になります。通常サイズ￥900。',
     image: beefDon,
   },
   {
