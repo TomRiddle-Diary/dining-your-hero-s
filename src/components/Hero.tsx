@@ -54,7 +54,7 @@ const Hero = () => {
                 <button
                   type="button"
                   onClick={useCallback(() => {
-                    const el = document.getElementById('access');
+                    const el = document.getElementById('contact');
                     if (el) {
                       el.scrollIntoView({ behavior: 'smooth' });
                     }
