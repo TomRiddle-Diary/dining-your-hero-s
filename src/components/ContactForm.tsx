@@ -70,6 +70,12 @@ export default function ContactForm() {
 
       if (!formData.reservationDate?.trim()) {
         newErrors.reservationDate = '予約日を選択してください';
+      } else {
+        // 水曜日（定休日）のチェック
+        const selectedDate = new Date(formData.reservationDate);
+        if (selectedDate.getDay() === 3) {
+          newErrors.reservationDate = '水曜日は定休日です。別の日付を選択してください。';
+        }
       }
 
       if (!formData.reservationTime?.trim()) {
@@ -143,6 +149,18 @@ export default function ContactForm() {
     const { name, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
     
+    // 予約日の水曜日チェック
+    if (name === 'reservationDate' && value) {
+      const selectedDate = new Date(value);
+      if (selectedDate.getDay() === 3) {
+        setErrors(prev => ({ 
+          ...prev, 
+          reservationDate: '水曜日は定休日です。別の日付を選択してください。' 
+        }));
+        return;
+      }
+    }
+    
     setFormData(prev => ({ 
       ...prev, 
       [name]: type === 'checkbox' ? checked : value 
@@ -207,23 +225,23 @@ export default function ContactForm() {
                     <input
                       type="radio"
                       name="formType"
-                      value="inquiry"
-                      checked={formData.formType === 'inquiry'}
-                      onChange={() => handleFormTypeChange('inquiry')}
-                      className="w-4 h-4 md:w-5 md:h-5 text-primary-green focus:ring-primary-green/50"
-                    />
-                    <span className="ml-2 text-sm md:text-base font-japanese-body">お問い合わせ</span>
-                  </label>
-                  <label className="flex items-center cursor-pointer">
-                    <input
-                      type="radio"
-                      name="formType"
                       value="reservation"
                       checked={formData.formType === 'reservation'}
                       onChange={() => handleFormTypeChange('reservation')}
                       className="w-4 h-4 md:w-5 md:h-5 text-primary-green focus:ring-primary-green/50"
                     />
                     <span className="ml-2 text-sm md:text-base font-japanese-body">ご予約</span>
+                  </label>
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="formType"
+                      value="inquiry"
+                      checked={formData.formType === 'inquiry'}
+                      onChange={() => handleFormTypeChange('inquiry')}
+                      className="w-4 h-4 md:w-5 md:h-5 text-primary-green focus:ring-primary-green/50"
+                    />
+                    <span className="ml-2 text-sm md:text-base font-japanese-body">お問い合わせ</span>
                   </label>
                 </div>
               </div>
@@ -482,7 +500,7 @@ export default function ContactForm() {
                   placeholder={
                     formData.formType === 'reservation'
                       ? '特別なご要望やご不明点などがございましたらご記入ください。'
-                      : 'メニューの追加希望、ご質問、改善案など、お気軽にお聞かせください。'
+                      : 'メニューの追加希望、ご質問、改善案な、応援メッセージなど、お気軽にお聞かせください。'
                   }
                   aria-label={formData.formType === 'reservation' ? 'その他のご要望' : 'お問い合わせ内容'}
                   aria-required={formData.formType === 'inquiry'}

@@ -10,10 +10,38 @@ import beefDonImg from '@/images/menu/beef_don.webp'
 import dryCurryImg from '@/images/menu/dry_curry.webp'
 
 const menuItems = [
-  { id: 1, title: 'ステーキ丼', price: '山盛り→1,300円\n通常→950円', image: beefDonImg},
-  { id: 2, title: '山盛りチキンカツカレー', price: '一般→1000円\n 学生→900円', image: katsuCurryImg },
-  { id: 3, title: 'トルコライス', price: '通常→950円\nスペシャル→1,300円', image: turkeyRiceImg },
-  { id:4, title: 'チーズフォンデュドライカレー', price: '950円', image: dryCurryImg}
+  { 
+    id: 1, 
+    title: 'ステーキ丼', 
+    subtitle: 'ヒーローズ一番人気！テレビで紹介された逸品',
+    description: 'ボリューム満点のステーキがこの価格で！きのことガーリックバターソースの相性が抜群。コスパ最強の看板メニュー。',
+    price: '山盛り→1,300円\n通常→950円', 
+    image: beefDonImg
+  },
+  { 
+    id: 2, 
+    title: '山盛りチキンカツカレー', 
+    subtitle: '鶏もも肉まるごと1枚の圧倒的ボリューム！',
+    description: 'じっくり時間をかけて煮込んだコク深い自家製スパイシーカレー。サクサクのカツとの相性抜群。学生には嬉しい学割あり！',
+    price: '一般→1000円\n 学生→900円', 
+    image: katsuCurryImg 
+  },
+  { 
+    id: 3, 
+    title: 'トルコライス', 
+    subtitle: '長崎名物！大人のお子様ランチ',
+    description: 'トンカツ・ナポリタン（ちゃんぽん麺使用）・カレーを一度に楽しめる欲張りプレート。長崎でしか味わえない贅沢な一皿。',
+    price: '通常→950円\nスペシャル→1,300円', 
+    image: turkeyRiceImg 
+  },
+  { 
+    id: 4, 
+    title: 'チーズフォンデュドライカレー', 
+    subtitle: 'インスタ映え間違いなし！チーズ好き必見',
+    description: '熱々の鉄板でチーズがぐつぐつ。目と耳で楽しむ、合い挽き肉と各種スパイスを調合した自信のドライカレー。チーズドバドバ！',
+    price: '950円', 
+    image: dryCurryImg
+  }
 ] as const
 
 const Menu = () => {

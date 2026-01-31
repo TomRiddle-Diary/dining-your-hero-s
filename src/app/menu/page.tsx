@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { GiBowlOfRice, GiMeal, GiSteak, GiNoodles, GiSpoon, GiShrimp, GiBeerStein, GiPizzaSlice, GiCoffeeCup } from 'react-icons/gi';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -31,6 +32,7 @@ const categories = [
 interface MenuItem {
   id: string;
   name: string;
+  subtitle?: string;
   description?: string;
   price: string;
   note?: string;
@@ -57,24 +59,27 @@ interface DrinkCategory {
 const specialtyMenu: MenuItem[] = [
   {
     id: 'beef-steak-don',
-    name: '山盛りステーキ丼',
-    description: '柔らか赤身ステーキをガーリックバター醤油で召し上がりください。',
-    price: '¥1,300',
-    note: '※ご飯300g、牛肉は通常サイズの2倍になります。通常サイズ￥900。',
+    name: 'ステーキ丼',
+    subtitle: 'ヒーローズ一番人気！テレビで紹介された逸品',
+    description: 'ボリューム満点のステーキがこの価格で！\nきのことガーリックバターソースの相性が抜群。コスパ最強の看板メニュー。',
+    price: '山盛り ¥1,300\n 通常 ¥950',
+    note: '※山盛りはご飯300g、お肉の量が通常の2倍になります。\n　画像は山盛り。',
     image: beefDon,
   },
   {
     id: 'chicken-katsu-curry',
     name: '山盛りチキン勝つカレー',
-    description: '学生必見！\nとにかくボリューミーな勝カレーをお楽しみください。',
-    price: '¥1,000',
-    note: '※ご飯300g、チキンカツ300g、カレーソース200g。学生は¥900。',
+    subtitle: '鶏もも肉まるごと1枚の圧倒的ボリューム!',
+    description: 'じっくり時間をかけて煮込んだコク深い自家製スパイシーカレー。\nサクサクのカツとの相性抜群。学生には嬉しい学割あり!',
+    price: '学生 ¥900\n一般 ¥1,000',
+    note: '※ご飯300g、チキンカツ300g、カレーソース200g。',
     image: katsuryCurry,
   },
   {
     id: 'cheese-fondue-dry-curry',
     name: 'チーズフォンデュドライカレー',
-    description: 'チーズ好きにはたまらない！\nチーズマグマの海で泳ぎたい!!',
+    subtitle: 'インスタ映え間違いなし！チーズ好き必見',
+    description: '熱々の鉄板でチーズがぐつぐつ。\n合い挽き肉と各種スパイスを調合した自信のドライカレー。',
     price: '¥950',
     note: '※スープ・サラダ付。',
     image: dryCurry,
@@ -82,15 +87,17 @@ const specialtyMenu: MenuItem[] = [
   {
     id: 'turkey-rice',
     name: 'トルコライス',
-    description: '長崎名物トルコライス。\nカレー、ナポリタン、とんかつをワンプレートでお楽しみください。',
-    price: '¥900',
+    subtitle: '長崎名物！大人のお子様ランチ',
+    description: 'トンカツ・ナポリタン・カレーを一度に楽しめる欲張りプレート。\n長崎でしか味わえない贅沢な一皿。',
+    price: '¥950',
     note: '※スープ付き。',
     image: turkeyRice,
   },
   {
     id: 'stamina-don',
     name: '豚スタ丼',
-    description: 'ニンニクたっぷりスタミナ丼。\nガツンと元気注入!豚肉×ニンニクの極み。',
+    subtitle: 'サイズが選べる手軽でお得な一品',
+    description: 'ニンニクが効いた特製ガーリックバターソース。\nステーキ丼と同じきのこソースを使用した、ヒーローズ流すた丼。',
     price: '¥800',
     note: '※サイズ変更可。',
     image: staminaDon,
@@ -471,7 +478,7 @@ const drinksMenu: DrinkCategory[] = [
     drinks: [
       {
         id: 'nomihoudai-plan',
-        name: '飲み放題（90分）',
+        name: '飲み放題 (90分)',
         price: '¥2,100',
       },
     ],
@@ -590,41 +597,45 @@ export default function MenuPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const menuSectionRef = useRef<HTMLDivElement>(null);
   const isInitialMount = useRef(true);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const router = useRouter();
+
+  // ページマウント時に一度だけhasInteractedをtrueに
+  useEffect(() => {
+    setHasInteracted(true);
+  }, []);
 
   useEffect(() => {
-    // 初回マウント時はスクロールをスキップ
-    if (isInitialMount.current) {
+    // 初回マウント時やページ遷移直後は何もしない
+    if (isInitialMount.current || !hasInteracted) {
       isInitialMount.current = false;
       return;
     }
 
+    // カテゴリボタンの中央寄せ
     if (selectedCategory && categoryRefs.current[selectedCategory] && scrollContainerRef.current) {
       const button = categoryRefs.current[selectedCategory];
       const container = scrollContainerRef.current;
       const buttonLeft = button.offsetLeft;
       const buttonWidth = button.offsetWidth;
       const containerWidth = container.offsetWidth;
-      
-      // ボタンを中央に配置するようにスクロール
       const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
-      
       container.scrollTo({
         left: scrollPosition,
         behavior: 'smooth'
       });
     }
 
-    // カテゴリ変更時にメニューセクションの一番上にスクロール
+    // メニューセクションのスクロール
     if (menuSectionRef.current) {
       const menuTop = menuSectionRef.current.offsetTop;
-      // デスクトップとモバイルで異なるオフセットを適用
       const offset = window.innerWidth >= 768 ? 160 : 120;
       window.scrollTo({
         top: menuTop - offset,
         behavior: 'smooth'
       });
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, hasInteracted]);
 
   return (
     <>
@@ -722,11 +733,11 @@ export default function MenuPage() {
                         <h3 className="text-xl md:text-2xl font-black text-[#DC281C] mb-4 font-japanese">
                           {item.name}
                         </h3>
-                        <p className="text-sm text-left md:text-base text-black font-bold whitespace-pre-line font-japanese">
+                        <p className="text-sm text-left md:text-base text-black font-semibold whitespace-pre-line font-japanese">
                           {item.description}
                         </p>
                         {item.note && (
-                          <p className="text-[14px] text-left md:text-sm text-gray-600 font-japanese whitespace-pre-line">
+                          <p className="text-[14px] text-left md:text-sm text-gray-600 font-japanese whitespace-pre-line mt-2">
                             {item.note}
                           </p>
                         )}
@@ -734,9 +745,33 @@ export default function MenuPage() {
 
                       {/* Price */}
                       <div className="flex-shrink-0 mx-auto md:mx-0 md:ml-4">
-                        <p className="text-xl md:text-2xl font-bold text-black">
-                          {item.price}
-                        </p>
+                        {item.id === 'beef-steak-don' ? (
+                          <div className="text-right space-y-1">
+                            <div className="flex items-center justify-end gap-2">
+                              <span className="text-xs md:text-sm text-black font-normal">山盛り</span>
+                              <span className="text-xl md:text-2xl font-bold text-black">¥1,300</span>
+                            </div>
+                            <div className="flex items-center justify-end gap-2">
+                              <span className="text-xs md:text-sm text-black font-normal">通常</span>
+                              <span className="text-xl md:text-2xl font-bold text-black">¥950</span>
+                            </div>
+                          </div>
+                        ) : item.id === 'chicken-katsu-curry' ? (
+                          <div className="text-right space-y-1">
+                            <div className="flex items-center justify-end gap-2">
+                              <span className="text-xs md:text-sm text-black font-normal">学生</span>
+                              <span className="text-xl md:text-2xl font-bold text-black">¥900</span>
+                            </div>
+                            <div className="flex items-center justify-end gap-2">
+                              <span className="text-xs md:text-sm text-black font-normal">一般</span>
+                              <span className="text-xl md:text-2xl font-bold text-black">¥1,000</span>
+                            </div>
+                          </div>
+                        ) : (
+                          <p className="text-xl md:text-2xl font-bold text-black whitespace-pre-line text-right">
+                            {item.price}
+                          </p>
+                        )}
                       </div>
                     </div>
                     {index < specialtyMenu.length - 1 && (
