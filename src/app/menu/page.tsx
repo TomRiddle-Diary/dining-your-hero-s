@@ -15,6 +15,7 @@ import beefDon from '@/images/menu/beef_don.webp';
 import dryCurry from '@/images/menu/dry_curry.webp';
 import katsuryCurry from '@/images/menu/oomori_katus_carry.webp';
 import staminaDon from '@/images/menu/sutamina_don.webp';
+import heroLogo from '@/images/logo.svg';
 import turkeyRice from '@/images/menu/turkey_rice.webp';
 
 const categories = [
@@ -100,7 +101,7 @@ const specialtyMenu: MenuItem[] = [
     description: 'ニンニクが効いた特製ガーリックバターソース。\nステーキ丼と同じきのこソースを使用した、ヒーローズ流すた丼。',
     price: '¥800',
     note: '※サイズ変更可。',
-    image: staminaDon,
+    image: heroLogo,
   },
 ];
 
@@ -723,7 +724,7 @@ export default function MenuPage() {
                             alt={item.name}
                             width={224}
                             height={224}
-                            className="w-full h-full object-contain"
+                            className={item.id === 'stamina-don' ? "w-full h-full object-contain filter grayscale opacity-30" : "w-full h-full object-contain"}
                           />
                         </div>
                       </div>

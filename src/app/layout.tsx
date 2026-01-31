@@ -3,8 +3,8 @@ import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "佐世保・川下町の洋食居酒屋 ヒーローズ(Dining Your Hero's) | 人気メニュー・ランチ・ディナー",
-  description: "ヒーローズ(Dining Your Hero's)は佐世保市川下町・相浦エリアで人気の洋食居酒屋。山盛りチキンカツカレーやトルコライスなど、ボリューム満点のメニューが揃うアットホームなレストランです。ランチ・ディナー・学割・団体予約もOK!",
+  title: "佐世保・川下町の洋食居酒屋 ヒーローズ(Dining Your Hero's) | オードブル・飲み放題・人気メニュー・ランチ・ディナー",
+  description: "ヒーローズ(Dining Your Hero's)は佐世保市川下町・相浦エリアで人気の洋食居酒屋。山盛りチキンカツカレーやトルコライスなど、ボリューム満点のメニューが揃うアットホームなレストランです。オードブルや飲み放題プランもご用意。ランチ・ディナー・学割・団体予約もOK!",
   // keywords: ["佐世保", "相浦", "川下町", "洋食", "居酒屋", "ヒーローズ", "チキンカツカレー", "トルコライス", "ランチ", "ディナー", "学割", "団体予約"]
 }
 
@@ -16,6 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* OGP & Twitter card for logo as search result icon */}
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="207" />
+        <meta property="og:image:height" content="116" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="/logo.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
